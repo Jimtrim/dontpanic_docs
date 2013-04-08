@@ -1,7 +1,128 @@
 \section{Requirements}
 \subsection{Functional requirements}
-\begin{itemize}
-	\item The game interface should provide experts with the ability to efficiently manage and control players.
+
+\begin{itemize} \setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}
+	\item The game interface should provide experts with the ability to efficiently manage and control the players.
 	\item The players must be able to interact with the client using an I/O device.
-	\item lol
+	\item The game interface should have elements for managing game sessions.
+	\item All game objects that exist longer than a single task, must be created and kept in storage. An object is anything from the players’ data to an invisible trigger object.
+	\item Game rules should be accepted as parameters in input. These parameters should be set by the experts through the management client. 
+	\item The expert should be able to follow a game session and comment on the tracking of the game, but should not be able to participate.
+	\item The expert should have the ability to effectively monitor the server.
 \end{itemize}
+\subsubsection{Use cases}
+The use cases are mainly based on the functional requirements of the game and are a graphical representation of the users’ interactions with the board game. They document all the different ways in which the user can interact with the game. 
+\\
+A detailed set of use case diagrams and textual use cases are provided below.\\
+
+% Masse figurer, fiz later
+% \huge \emph{Masse figurer, fix later} \normalsize \\
+
+\begin{table}[H]
+\begin{tabular}{|l|l|} \hline
+	ID & 01\\ \hline
+	Name & Login Player\\ \hline
+	Goal & To be connected to the server\\ \hline
+	Actors & Player, server\\ \hline
+	Start requirements & None\\ \hline
+	End requirements & - The player gets logged in.\\
+					 & - The game is displayed.\\ \hline
+	Case & - The player gets prompted with the login window. \\
+		 	& - The players gives login-info.\\
+			& - The player is now logged in.\\ \hline
+	Alternative Case & Wrong password\\ \hline
+	Previous Use Case & None\\ \hline
+	Spawned Use Case & 05\\ \hline
+\end{tabular}
+\caption{Use Case: Login player}
+\label{fig:usecase01table}
+\end{table}
+
+
+\begin{table}[H]
+\begin{tabular}{|l|l|} \hline
+	ID & 02\\ \hline
+	Name & Login Expert\\ \hline
+	Goal & To be connected to the server\\ \hline
+	Actors & Expert, server\\ \hline
+	Start requirements & None\\ \hline
+	End requirements & - The expert gets logged in.\\
+					 & - The expert view is displayed.\\ \hline
+	Case & - The expert gets prompted with the login window. \\
+		 	& - The expert gives login-info.\\
+			& - The expert is now logged in.\\ \hline
+	Alternative Case & Wrong password\\ \hline
+	Previous Use Case & None\\ \hline
+	Spawned Use Case & 03\\ \hline
+\end{tabular}
+\caption{Use Case: Login expert}
+\label{fig:usecase02table}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{|l|l|} \hline
+	ID & 03\\ \hline
+	Name & Game Setup\\ \hline
+	Goal & To create a successful game session\\ \hline
+	Actors & Expert, server\\ \hline
+	Start requirements & The expert is logged in\\ \hline
+	End requirements & The expert is able to create a game setup \\ 
+						& The expert is able to save the game setup\\ \hline
+	Case & The expert creates the appropriate map for the game.\\
+			& The expert adds the wanted board pieces.\\
+			& The expert manages the zones, the number of people and panic levels.\\
+			& The expert manages the cards, adds the wanted cards to the game.\\
+			& The expert adds the wanted number of players to the game.\\
+			& The expert assigns roles to each player. \\
+			& The expert sets the starting point for each player.\\ \hline
+	Alternative Case & None \\ \hline
+	Previous Use Case & 02\\ \hline
+	Spawned Use Case & 04, 05\\ \hline
+\end{tabular}
+\caption{Use Case: Game Setup}
+\label{fig:usecase03table}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+	ID & 04\\ \hline
+	Name & Watcher\\ \hline
+	Goal & To get a non player version of the game\\ \hline
+	Actors & Expert, server\\ \hline
+	Start requirements & The expert is logged in, a game is running \\ \hline
+	End requirements & The expert is able to watch the wanted game\\ \hline
+	Case & The expert selects the game to watch from a list of games\\
+		 & The server provides a game window in which the expert is not\\ 
+		 & participating as a player\\ \hline
+	Alternative Case & None \\ \hline
+	Previous Use Case & 02\\ \hline
+	Spawned Use Case & None\\ \hline
+\end{tabular}
+\caption{Use Case: Watcher}
+\label{fig:usecase04table}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+	ID & 05\\ \hline
+	Name & Join Game\\ \hline
+	Goal & To successfully join a starting game\\ \hline
+	Actors & User, game session, server \\ \hline
+	Start requirements & A game has been created by the exper\\ \hline
+	End requirements & A user is able to join the appropriate game\\ \hline
+	Case & The user clicks on join options for the game\\
+			& The game asks for user info \\
+			& The user joins the game \\ \hline
+	Alternative Case & The user gives incorrect info and is not added to the game \\ \hline
+	Previous Use Case & 03 \\ \hline
+	Spawned Use Case & 06, 07\\ \hline
+\end{tabular}
+\caption{Use Case: Join Game}
+\label{fig:usecase05table}
+\end{table}
+
+
+
+
