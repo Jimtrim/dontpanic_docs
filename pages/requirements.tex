@@ -15,12 +15,11 @@ The use cases are mainly based on the functional requirements of the game and ar
 \\
 A detailed set of use case diagrams and textual use cases are provided below.\\
 
-% Masse figurer, fiz later
-% \huge \emph{Masse figurer, fix later} \normalsize \\
 
+% START USE-CASE TABLES
 \begin{table}[H]
 \begin{tabular}{|l|l|} \hline
-	ID & 01\\ \hline
+	\textbf{ID} & \textbf{01}\\ \hline
 	Name & Login Player\\ \hline
 	Goal & To be connected to the server\\ \hline
 	Actors & Player, server\\ \hline
@@ -41,7 +40,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 
 \begin{table}[H]
 \begin{tabular}{|l|l|} \hline
-	ID & 02\\ \hline
+	\textbf{ID} & \textbf{02}\\ \hline
 	Name & Login Expert\\ \hline
 	Goal & To be connected to the server\\ \hline
 	Actors & Expert, server\\ \hline
@@ -61,7 +60,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 
 \begin{table}[H]
 \begin{tabular}{|l|l|} \hline
-	ID & 03\\ \hline
+	\textbf{ID} & \textbf{03}\\ \hline
 	Name & Game Setup\\ \hline
 	Goal & To create a successful game session\\ \hline
 	Actors & Expert, server\\ \hline
@@ -86,7 +85,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{table}[H]
 \begin{tabular}{|l|l|}
 \hline
-	ID & 04\\ \hline
+	\textbf{ID} & \textbf{04}\\ \hline
 	Name & Watcher\\ \hline
 	Goal & To get a non player version of the game\\ \hline
 	Actors & Expert, server\\ \hline
@@ -106,7 +105,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{table}[H]
 \begin{tabular}{|l|l|}
 \hline
-	ID & 05\\ \hline
+	\textbf{ID} & \textbf{05}\\ \hline
 	Name & Join Game\\ \hline
 	Goal & To successfully join a starting game\\ \hline
 	Actors & User, game session, server \\ \hline
@@ -122,6 +121,145 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \caption{Use Case: Join Game}
 \label{fig:usecase05table}
 \end{table}
+
+
+
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+	\textbf{ID} & \textbf{06}\\ \hline
+	Name & Move game pieces \\ \hline
+	Goal & To move a game piece to a wanted location \\ \hline
+	Actors & Player, game board, game session, server \\ \hline
+	Start requirements & The player has joined a game \\
+				& The player in question has the turn \\ \hline
+	End requirements & The player is able to move the selected piece to the wanted position. \\ \hline
+	Case & The player uses the game pad to select the wanted object. \\
+		& The player drags the object to the wanted location. \\
+		& The game board is updated. \\ \hline
+	Alternative Case & The player selects an immovable object \\
+				& The player moves the object to an unobtainable location\\ \hline
+	Previous Use Case & 06 \\ \hline
+	Spawned Use Case & None\\ \hline
+\end{tabular}
+\caption{Use Case: Move game pieces}
+\label{fig:usecase06table}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+	\textbf{ID} & \textbf{07}\\ \hline
+	Name & Use information cards\\ \hline
+	Goal & To use an information card to affect the board\\ \hline
+	Actors & Player, Game Board, Game Session, Server\\ \hline
+	Start requirements & The expert has created a game\\
+				& The player is logged in\\
+				& The player is part of a game\\
+				& The player has an information card \\ \hline
+	End requirements & The card effect is carried out on the board\\
+				& The player does not have the used information card \\ \hline
+	Case & The player selects the information card\\
+		& The information card effect is carried out on the board\\
+		& The player loses his information card \\ \hline
+	Alternative Case & None \\ \hline
+	Previous Use Case & 05\\ \hline
+	Spawned Use Case & None\\ \hline
+\end{tabular}
+\caption{Use Case: Use information cards}
+\label{fig:usecase07table}
+\end{table}
+
+
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+	\textbf{ID} & \textbf{08}\\ \hline
+	Name & Use player action \\ \hline
+	Goal & The player uses an action and the game board is updated\\ \hline
+	Actors & Player, Game Board, Game Session, Server \\ \hline
+	Start requirements & The user is logged in \\
+				& The user is a player in the game\\
+				& A game is in action\\ \hline
+	End requirements & The player uses an action \\
+				& The effect is updated on the board \\ \hline
+	Case & The player selects an action with the gamepad\\
+		& The player selects a zone or a node\\
+		& The action is used on the target\\
+		& The game board is updated\\ \hline
+	Alternative Case & None\\ \hline
+	Previous Use Case & 05\\ \hline
+	Spawned Use Case & None\\ \hline
+\end{tabular}
+\caption{Use Case: Login expert}
+\label{fig:usecase08table}
+\end{table}
+% END USE-CASE TABLES
+
+
+
+\subsection{Non functional requirements} 
+
+
+All non functional requirements comply with the definitions as stated in the ISO 25010 standard (replacing ISO 9126). Only relevant requirements are mentioned in this report.
+
+\subsubsection{Quality in use}
+
+\subsubsection{Efficiency}
+Like regular board games, actions should not be difficult to execute. The players are working against the clock (the panic increase timer). Hence, when designing the user interface, one of the aims should be to minimize the number of clicks required.
+
+\subsubsection{Context coverage}
+The system should be flexible enough to accommodate individual experts’ preferences and needs in their simulations. By relying on the settings given by the expert through the expert interface form, the best possible flexibility can be ensured.
+
+\subsubsection{Product quality}
+
+\emph{1: Functional suitability}\\
+Functional completeness should be achieved to include the core functionality 
+of the board game, as well as the functionality specific to the electronic 
+version, like the expert interface and panic- and people management. 
+\\
+Core functions must be without game-breaking bugs to ensure functional 
+correctness.
+\\\newline
+\emph{2: Operability}\\
+Ease of use is considered important, as the users should spend time playing the 
+game and learn how to manage panic, rather than how to operate the game. 
+\\
+By exploiting recognisability from classic board games, a lot of interaction 
+can be made intuitive, given that most people already know how to play board 
+games. 
+\\
+Users of the game will most likely not be as proficient with computers as 
+“gamers” in general. Therefore, it would be a good idea to make the game 
+accessible without having to install anything other than an internet browser.
+\\\newline
+\emph{3: Transferability}\\
+The client should be usable on as many platforms as possible (Mac, Windows, 
+Linux, Mobile platforms), and in the best possible case be able to interact 
+with devices such as Arduino. HTML5 with node.js was chosen for this reason, as 
+it can run on nearly any device without the need for time consuming 
+installation procedures.
+
+
+\subsubsection{Technical requirements}
+These requirements have been copied from the “Don’t Panic” specifications 
+provided by the customer.\\
+
+Don’t Panic DPS has to meet to the following requirements:\\
+- All interaction between the server and client SHOULD be performed using well 
+documented protocols and standard protocols.\\
+- The DPS Game rules SHOULD be platform independent. Consequently, high level 
+languages such as Java, Processing, Python COULD be considered as good 
+candidates.\\
+- The overall architecture SHOULD be scalable to run multiple Game sessions in 
+parallel without decreasing the quality of already running games sessions.\\
+-Already existing frameworks for game development for such as Unity, Microsoft 
+XNA Game Studio, or management tools such as RedMine COULD be used as platforms 
+to help speeding up the development of the game. The choice should be driven by 
+a framework comparison analysis considering both technical requirements and 
+already existing skills/experience among group participants.
+
+
 
 
 
