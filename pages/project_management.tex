@@ -1,4 +1,189 @@
 \section{Project Management}
 
-Due to the extensive need for documentation, Scrum is not a suitable model of this process. Moreover, the intended model of process cannot be fitted in a waterfall model. Therefore, the model used will be a mixture of the best properties from both models. First of all the architecture will be designed along with the production of a detailed, sensible documentation. Then a simple, “bare bone” version of the game will be 
-developed. Finally, the required features will be iterated on this version.
+\subsection{Process Model}
+% TODO: Insert image
+Due to the extensive need for documentation, Scrum is not a suitable model of 
+this process. Moreover, the intended model of process cannot be fitted in a 
+waterfall model. Therefore, the model used will be a mixture of the best 
+properties from both models. First of all the architecture will be designed 
+along with the production of a detailed, sensible documentation. Then a simple, 
+“bare bone” version of the game will be developed. Finally, the required 
+features will be iterated on this version.
+
+
+\subsubsection{Kanban board}
+% TODO: insert image 
+The Kanban system fitted the project development process well, as a core 
+prototype of the game was initially developed. Secondly, plans were made to 
+add features such as a replay of a game session, an Expert interface and a 
+database. It was decided to use an online version of a Kanban board called 
+LeanKit Kanban. LeanKit was easy to use and enabled customizing the separation 
+of tasks and processes on the board, as well as categorizing tasks by color. 
+In addition, it enabled customizing the Kanban board, such as adding an extra 
+“Testing” section for tasks.
+
+
+
+
+\subsection{Roles and responsibilities (tentative)}
+These are the roles assigned to the different team members:
+
+\begin{itemize} \setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}
+	\item Customer/supervisor contact - Sindre Svendsrud
+	\item Server manager - Jim Frode Hoff
+	\item LaTeX configuration manager - Jim Frode Hoff
+	\item Client manager - Stian Aurheim and Jørgen Foss Eri
+	\item Expert interface manager - Adrian Arne Skogvold
+	\item Team manager - Jørgen Foss Eri
+	\item Test manager- Jens Even Berg Blomsøy
+	\item Database manager - Jens Even Berg Blomsøy
+	\item Documentation manager - Sindre Svendsrud
+\end{itemize}
+
+
+\noindent\textbf{Customer/supervisor contact}\\ % \noident == quickfix
+The customer/supervisor contact is responsible for the communication with the 
+customer and the supervisor. It is important that he shares important 
+information such as time and place for meetings with the rest of the group.
+\\\newline
+\textbf{Server manager}\\
+The server manager is responsible for the development of the server. That does 
+not mean he has to do all the coding himself, but he has to make sure that 
+everything that needs to be done on the server side is done. The main task is 
+to implement the game rules.
+\\\newline
+\textbf{LaTeX configuration manager}\\
+The responsibility of the latex configuration manager is to export the project 
+report to latex and configuration of github.
+\\\newline
+\textbf{Client manager}\\
+The client manager is responsible for the development of the client. That means 
+that he has to make sure that the client is displayed correctly. Typical work 
+here is the drawing of objects such as draw player or draw node. 
+\\\newline
+\textbf{Expert interface manager}\\
+The expert interface manager is responsible for the expert interface. The 
+expert interface sets up the game. The main task is to implement a way for the 
+expert to set up the game.
+\\\newline
+\textbf{Team manager}\\
+The team manager is responsible for the progress of the project. He makes sure 
+deadlines are met, meetings are attended and that the team members are engaged.
+\\\newline
+\textbf{Test manager}\\
+The test manager is responsible for writing the tests of the system. He should 
+also make sure that the tests are performed.
+\\\newline
+\textbf{Database manager}\\
+The database manager is responsible for the database, that means the design of the database (ER diagram) and the implementation of the database. Typical work here is to make database queries. 
+\\\newline
+\textbf{Documentation manager}\\
+The documentation manager is responsible for the documentation of the project. The main tasks are to create and maintain the structure of the report.
+
+
+
+
+\subsection{Time plan}
+A time schedule to view planned tasks and their deadlines has been created in a 
+Gantt chart (available as attachment). 
+\\\newline
+A short summary of the development can be seen as:\\
+Version 1: Server game logic, client event handler, (simple) client view and 
+communication module \\
+Version 2: Addition of the administration interface and the expert client, 
+extend view and game rule support\\
+Version 3: Adaptation to other clients, extra features beyond the core \\
+
+\subsubsection{Milestones} 
+During the project there are certain milestones to be completed in time, both project report and technical milestones. \\
+\newline
+\textbf{Project report milestones}\\
+10 February - Delivery - Project report: Preliminary version\\
+15 March - Delivery - Project Report: Mid-semester version\\
+19 April - Delivery - Project report: Final comments from supervisor\\
+27 May - Delivery - Project report: Final version\\
+\newline
+\textbf{Technical milestones} \\
+18 February - Barebone client that can communicate with the server \\
+18 February - Barebone server that can communicate with the client\\
+28 February - Basic prototype of the game\\
+28 February - Database connection\\
+11 March - Game v.1, a simple, working prototype of the game\\
+22 March - Database queries\\
+19 April - Expert interface for setting up the game\\
+10 May - Game final\\
+\newline
+These are the code milestones which were set for the project in regards to the 
+client/server/database functionality. The reason the milestones is in that 
+order is because many of them depend on the milestones prior to them. \\
+
+
+\subsection{Work breakdown structure}
+% TODO: Legge inn bilde
+
+\subsection{Risk list}
+\input{special/risk_list}
+
+\subsection{Example of status report}
+At the end of each week a status report will be sent to the customer and supervisor. This is an example of a status report that follows the given template: \\
+\newline
+Status report week 10 group 10\\
+\\
+\textbf{1 Introduction}\\
+We now have a working prototype!\\
+\\
+\textbf{2 Progress summary}\\
+The players can now move and de-panic zones, and turns are implemented. A timer for increased panic is implemented. The drawing functionality for objects works for the most part, and the database connection is now up and running. Css has been implemented for nice looks. Messages passing between the client and server (with json) work correctly.\\
+\\
+\textbf{3 Open / closed problems}\\
+The database connection was a huge problem. It was detected that IDI had a firewall turned on. Much time was wasted due to error detection in the code (which was pretty much correct all the time).\\
+\\
+\textbf{4 Planned work for the next period}\\
+Make database queries, event and information cards, roles and figure out how to implement effects (could be tricky). Produce documentation as always. Finish the requirements for the midterm report.\\
+\\
+\textbf{5 Updated risks analysis}\\
+No updates needed.\\
+
+
+\subsection{Communication}
+During the project period it is important to continuously communicate with the customer. This way the customer is always informed on what has been done and enables giving feedback on what is desired next. In addition, the supervisor needs to be informed about the progress/work at all times. Finally, it is crucial that all team members communicate well.
+
+\subsubsection{Interactions with the customer}
+Regular meetings with the customer took place either weekly or bi-weekly. The meetings were scheduled through email. Prior to each meeting a presentation of the current state of the game was prepared. In addition, questions that needed answers regarding game functionality and rules were written. Simple logs of these meetings were kept to enable later reflections on the meetings. The fact that the customer is located at NTNU made it easy to set up schedules and have meetings.
+
+Throughout the meetings, the customer sometimes requested new tasks that went beyond the initial game functionalities. The was done because the customer was satisfied with the work so far, and wanted to provide extra challenges. These challenges were not required for this project, but if possible, they would add extra features to the game. An example of this was the possibility of using Sifteo Cubes as a game client, where the cubes would be used as zones. This was mentioned by the customer during one of the meetings. As this was not an important functionality, it was decided to focus 100\% on developing the JavaScript/HTML5 client, and perhaps test the Cubes at a later stage when the client was fully functional.
+
+
+
+\begin{table}[H]
+{\scriptsize
+\begin{tabular}{|p{1.9cm}|p{1.9cm}|p{1.9cm}|p{3cm}|p{3.5cm}|p{3.5cm}|}
+\hline
+	\textbf{Date} & \textbf{Called by} & \textbf{Purpose} & \textbf{Preperation}
+	 	& \textbf{Agenda} & \textbf{Notes} 
+\\ \hline
+	3/11/2013 & Customer & Update on where we are with the project
+		& Implemented timer and cards (at least core functionality of cards), 
+a task given to us on prior meeting 
+		& Discussed how the amount of people should affect the panic level in 
+the zones. Panic in a zone COULD be proportional to the amount of people, not 
+important. Discussed events and how they could be solved by finishing a "quest" 
+of different steps (example: if there is a fire: move people out, block zone, 
+put out fire). These "quests" were not a requirement, only a suggestion. 
+Discussed the use of Sifteo Cubes (an interactive game system with electronic 
+gadgets) as a client, not a requirement. Important that we have a working 
+game+client; other clients are "bonuses". 
+		& This week we will work mostly with the report, not the game. This was explained to the customer.
+\\\hline
+\end{tabular}
+}
+\caption{Customer meeting log}
+\label{fig:CustomerMeetingLog}
+\end{table}
+
+\normalsize
+
+
+
+
+
