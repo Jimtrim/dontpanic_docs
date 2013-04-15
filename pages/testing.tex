@@ -1,0 +1,100 @@
+\section{Testing}
+\subsection{Test plan}
+The game will be tested thoroughly by both Black Box and White Box testing. Black Box testing will be the main point in this test plan. White Box testing will be done throughout the project and continuously, while the code is being written. An analysis was made of the pros and cons of writing small automated tests for the game, and the conclusion was that this would be more work for not enough profit. When the core of the game is finished the game development process switches from intertwined code to adding rules and actions to the game. This can be seen as layers. When the layering on top of the game core is done, it is not that difficult to test the added methods by itself. For this reason automated tests will not be written.\\
+\\
+For the Black Box testing a series of tests will be written, based upon the requirements specified in Chapter 2: Requirements. The Black Box testing implies thorough interaction between the team and the game. The aim is to see how the different objects on the map interact with each other, to find incorrections and glitches. In addition to testing the game for errors usability tests will be gone through. The usability tests will be done with an external actor to ensure independent feedback.The testperson will go through the different use cases to ensure satisfiability. \\
+
+\subsubsection{Black Box testing}
+
+The Black Box testing will shadow every part of the game. It is important that every part of the game is as error free and glitch free as possible. These are the test areas which will be looked closely at:
+
+\begin{itemize} \setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}
+	\item The start of the game, such as login and menus
+	\item The art of the game. These include the board model, player models and other object models contained in the game
+	\item The movements of the game, moving board pieces around and the use of information cards 
+	\item The view of the game board, borders and accurate frames
+	\item The game flow, how the board game reacts to different turns
+	\item The events and triggers within the game
+	\item The interaction of the gamepad within the game
+	\item The game rules (the tester needs to be familiar with the rules)
+	\item A test for objects overlapping within the game, clipping
+	\item Testing for multiplayer version, running more than one game, and as many as possible at one point
+	\item Testing memory overload by leaving it on for an extended period of time. This is one of the few negative testing features that the game will go through
+	\item A test for platform compatibility, since this is HTML5 based the platform will be different web browsers
+\end{itemize}
+\noindent
+After testing has been done thoroughly, the testing phase will go on to tests with people unattached to the project. Unattached people will be used because it will be helpful to get feedback from someone outside the group. If there is something missing or incomprehensible, it provides the opportunity to correct or improve the error. The test person will go through the test provided, based on the use cases from the requirements. Common formalities such as voluntariness, choices and uncomforts will be gone through before the tests are made.\\
+\\
+Some points that will be confined to are:
+
+\begin{itemize} \setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}
+	\item Under the tests the tester will not receive any help (unless unforeseen events occur that requires it).
+	\item The tester has the choice to abort the tests at any moment
+	\item The tester should think aloud, so that the choices made will be easier to understand
+	\item The supervisors (the team) should take notes 
+	\begin{itemize} \setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}
+		\item of problems during the tests.
+		\item when the tester is unsure about what to do.
+		\item when the tester does something wrong.
+		\item if the tester does not know what to do at all.
+		\item of any unforeseen events that occur during the tests.
+	\end{itemize}
+\end{itemize}
+\noindent
+After the tests are done a SUS sheet will be provided for the tester where he can evaluate the different parts of the system. Here is also the time for discussion and inputs from the tester. The supervisors have at this point taken several notes, and will have some questions about some of them to ask the tester.\\
+\\
+The result from each test and the comments will be shown in the tables below. Each table will provide:\\
+\begin{itemize} \setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}
+	\item Test number
+	\item Test case
+	\item Comments about the test
+	\item Problems during the tests and comments of these
+	\item Proposals for solutions
+	\item Improvements absolutely needed
+	\item Small tweaks wanted
+\end{itemize}
+
+
+\subsubsection{System usability testing}
+The tester is provided with the SUS (System Usability Score) sheet. The SUS sheet is a questionnaire containing 10 statements. The tester is expected to respond to each statement by choosing one of five options, depending on the degree of agreeability.\\
+\\
+The statements are:
+\begin{enumerate} \setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}
+	\item I think that I would like to use this system frequently.
+	\item I found the system unnecessarily complex.
+	\item I thought the system was easy to use.
+	\item I think that I would need the support of a technical person to be able to use this system.
+	\item I found the various functions in this system were well integrated.
+	\item I thought there was too much inconsistency in this system.
+	\item I imagine that most people would learn to use this system very quickly.
+	\item I found the system very cumbersome to use.
+	\item I felt very confident using the system.
+	\item I needed to learn a lot of things before I could get going with this system.
+\end{enumerate}
+These are the 5 choices:
+% TODO:IMAGE
+
+
+
+
+\subsubsection{Unit testing}
+
+\subsubsection{White Box}
+
+
+\input{special/test_tables}
+
+
+
+
+
+
+
+
+
+\subsection{Tests}
+\subsubsection{Black Box tests}
+
+
+
+

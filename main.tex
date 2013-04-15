@@ -6,11 +6,33 @@
 \usepackage{float}
 \usepackage{longtable}
 
+
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{array}
+% Define your own types for special columns:
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\makeatletter
+\newcolumntype{F}[1]{>{\raggedright\arraybackslash\@minipagetrue\flushemize}p{#1}<{\endflushemize}}
+\makeatother
+
+\newenvironment{flushemize}{%
+    % You should put this outside the `list`. The new environment will make them local anyway:
+    \setlength{\itemsep}{1pt}%
+    \setlength{\parskip}{0pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{12pt}%
+    % Use \list ... \endlist instead of \begin{list} ... \end{list} inside another environment
+    \list{$\bullet$}\unskip}
+    {\endlist}
+
+
+
 % \usepackage{hyperref}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-
-
 
 \begin{document}
 
@@ -22,6 +44,8 @@
 \input{pages/requirements} \pagebreak
 \input{pages/prestudy} \pagebreak
 \input{pages/project_management} \pagebreak
+\input{pages/implementation} \pagebreak
+\input{pages/testing} \pagebreak
 \input{pages/ny_seksjon} \pagebreak
 
 
