@@ -1,0 +1,487 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{ID}	& \textbf{01}\\ \hline
+	Name		& Game Start\\ \hline
+	Time schedule	& Approximately 10 minutes \\ \hline
+	Enviorment requirements 
+		& The test computer must have internet access. \\
+		& Regarding software, only a web browser is required. \\ \hline
+	Test risk analasys 
+		& Connection failure - Plausible \\ 
+		& \emph{* Try to connect again. If the error persists, use another computer.} \\
+		& \emph{* If switching computer does not resolve the connection failure, use another network.}\\ \hline
+	Goal	& The test is to verify that the player can log in and start a game without problems. \\ \hline
+	Actors	& Player, Game Board, \emph{Game Session, Server}\\ \hline
+	Test requirements
+		& The player can connect with the server. \\
+		& The player can not log in with incorrect credentials. \\
+		& The player can join the selected game. \\
+		& The player cannot join an unintended game.\\ \hline
+	End requirements 
+		& The player cannot connect with the server. \\
+		& The player can log in with incorrect credentials. \\
+		& The player cannot join the selected game. \\
+		& The player can join an unintended game. \\
+		& The player disconnects. \\ \hline
+	Disruption criteria 
+		& The player tries to connect with the server. \\
+		& The player logs in with his credentials. \\
+		& The player tries to join a game. \\ \hline
+	Test case
+		& The player tries to connect with the server. \\
+		& The player logs in with his credentials. \\
+		& The player tries to join a game. \\ \hline
+	Alternative case
+		& The player logs in with incorrect credentials.\\
+		& The player tries to join an unintended game. \\ \hline
+	Test results 
+		& \\ \hline
+	Test comments
+		& \\ \hline
+	Improvements needed
+		& \\ \hline
+\end{tabular}
+
+
+\caption{Black Box Test: Game Start}
+\label{fig:black_box_test_1}
+\end{table}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{ID}	& \textbf{02}\\ \hline
+	Name		& Gamepad Interaction\\ \hline
+	Time schedule	& Approximately 10 minutes\\ \hline
+	Enviorment requirements 
+		& The test computer must have internet access. \\
+		& Regarding software, only a web browser is required. \\ \hline
+	Test risk analasys 
+		& Connection failure - Plausible \\
+		& \emph{* Try to connect again. If the error persists, use another computer.} \\
+		& \emph{* If switching computer does not resolve the connection failure, use another network.}\\ 
+		& Hardware fault - unlikely \\
+		& \emph{* Use another computer within the group.} \\ \hline
+	Goal	& The test is to verify that the gamepad is usable with the game and to the team’s satisfaction. \\ \hline
+	Actors	& Player, Game Board, \emph{Game Session, Server}\\ \hline
+	Test requirements
+		& An expert has created a game. \\
+		& The player is inside a game session. \\ \hline
+	End requirements 
+		& The gamepad works with every part of the game.\\ \hline
+	Disruption criteria 
+		& The gamepad cannot move or interact with the game board. \\
+		& The gamepad can pick up objects but not hold on to them. \\
+		& The gamepad cannot move the objects to another point. \\
+		& The player disconnects. \\ 
+		& Unexpected faults with the gamepad. \\ \hline
+	Test case
+		& The player checks the gamepad for interaction possibilities with the game board. \\
+		& The player then checks if the gamepad can move objects around with the gamepad. \\
+		& The player verifies that the gamepad can move objects to another location. \\ \hline
+	Alternative case
+		& \emph{None}\\ \hline
+	Test results 
+		& \\ \hline
+	Test comments
+		& \\ \hline
+	Improvements needed
+		& \\ \hline
+\end{tabular}
+
+
+\caption{Black Box Test: Gamepad interaction}
+\label{fig:black_box_test_2}
+\end{table}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 3
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{ID}	& \textbf{03}\\ \hline
+	Name		& Game art.\\ \hline
+	Time schedule	& Approximately 10 minutes.\\ \hline
+	Enviorment requirements 
+		& The test computer must have internet access. \\
+		& Regarding software, only a web browser is required. \\ \hline
+	Test risk analasys 
+		& Connection failure - Plausible \\
+		& \emph{* Try to connect again. If the error persists, use another computer.}\\
+		& \emph{* If switching computer does not resolve the connection failure, use another network.}\\ 
+		& Hardware fault - unlikely \\
+		& \emph{* Use another computer within the group.} \\ \hline
+	Goal	& The test is to verify that the game art is according to the standards and has no deviations. \\ \hline
+	Actors	& Player, Game Board, \emph{Game Session, Server}\\ \hline
+	Test requirements
+		& An expert has created a game.\\
+		& The player is inside a game session.\\ \hline
+	End requirements 
+		& The board model has no deviations (fragments, overlappings, clippings, out of frame, correct colors and form). \\
+		& The player models are as they should be (correct colors, png, way and position). \\
+		& Other object models (blockade and information center) are satisfiable. \\ \hline
+	Disruption criteria 
+		& The board model has one of the mentioned deviations or other impurities.\\
+		& The player model has one deviation or an unexpected fault.\\
+		& Other object models have faults or deviations.\\
+		& The player cannot move or place the intended objects on the board.\\
+		& The player disconnects \\ \hline
+	Test case
+		& The player checks the board thoroughly for deviations from the planned model.\\
+		& The player then checks the player model for impurities, also while the model is moving.\\
+		& The player checks the other game pieces, information center and blockades, 
+			while they are being placed on the board or moving.\\ \hline
+	Alternative case
+		& \emph{None}\\ \hline
+	Test results 
+		& \\ \hline
+	Test comments
+		& \\ \hline
+	Improvements needed
+		& \\ \hline
+\end{tabular}
+
+
+\caption{Black Box Test: Game art}
+\label{fig:black_box_test_3}
+\end{table}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 4
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{ID}	& \textbf{04}\\ \hline
+	Name		& Game Movement\\ \hline
+	Time schedule	& Approximately 10 minutes.\\ \hline
+	Enviorment requirements 
+		& The test computer must have internet access. \\
+		& Regarding software, only a web browser is required. \\ \hline
+	Test risk analasys 
+		& Connection failure - Plausible \\ 
+		& \emph{* Try to connect again. If the error persists, use another computer.}\\
+		& \emph{* If switching computer does not resolve the connection failure, use another network.}\\ 
+		& Hardware fault - unlikely \\
+		& \emph{* Use another computer within the group.} \\ \hline
+	Goal	& The test is to verify that the game movements are functional and according to the standards.\\ \hline
+	Actors	& Player, Game Board, \emph{Game Session, Server}\\ \hline
+	Test requirements
+		& An expert has created a game. \\
+		& The player is inside a game session. \\ \hline
+	End requirements 
+		& The movement of the player model is satisfiable.\\
+		& The placement of the information center model is satisfiable.\\
+		& The placement of the blockade model is satisfiable.\\
+		& The movement of the information cards is satisfiable. \\ \hline
+	Disruption criteria 
+		& The movement of one of the objects is glitchy, flickering, moving out of bounce 
+			or something unexpected happens while the player is moving one of the objects. \\
+		& The player cannot see the object after it is moved. \\
+		& The object appears in the wrong place after it is moved or placed on the board. \\
+		& The player cannot locate the object intended to move. \\
+		& The player loses the object without human fault, while holding it in the “drag and drop”. \\
+		& The player cannot move or place intended objects on the board. \\
+		& The player disconnects. \\ \hline
+	Test case
+		& The player checks the player model while in movement and after it is dropped on the board.\\
+		& The player checks the information cards after and while they are in movement.\\
+		& The player checks the placement of the blockades.\\ 
+		& The player checks the placements of the information center. \\ \hline
+	Alternative case
+		& \emph{None}\\ \hline
+	Test results 
+		& \\ \hline
+	Test comments
+		& \\ \hline
+	Improvements needed
+		& \\ \hline
+\end{tabular}
+
+
+\caption{Black Box Test: Game movement}
+\label{fig:black_box_test_4}
+\end{table}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 5
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{ID}	& \textbf{05} \\ \hline
+	Name		& Game flow\\ \hline
+	Time schedule	& Approximately 10 minutes.\\ \hline
+	Enviorment requirements 
+		& The test computer must have internet access. \\
+		& Regarding software, only a web browser is required. \\ \hline
+	Test risk analasys 
+		& Connection failure - Plausible \\
+		& \emph{* Try to connect again. If the error persists, use another computer.} \\
+		& \emph{* If switching computer does not resolve the connection failure, use another network.}\\ 
+		& Hardware fault - unlikely \\
+		& \emph{* Use another computer within the group.} \\ \hline
+	Goal	& The test is to verify that the game handles turns correctly. \\ \hline
+	Actors	& Player, Game Board, \emph{Game Session, Server} \\ \hline
+	Test requirements
+		& An expert has created a game.\\
+		& The player is inside a game session.\\ \hline
+	End requirements 
+		& The game turns work as they were intended. \\
+		& Turns do not change before the player gives the command. \\
+		& The player is able to use his or her complete turn, use the right amount of actions within a turn.\\ \hline
+	Disruption criteria 
+		& The game turn changes before the command is given. \\
+		& The game turn does not change when the command is given. \\
+		& The player is unable to use his or her complete turn, missing actions. \\
+		& The current player does not change, or the previous player can still move its player model. \\
+		& The player is able to use more than the given actions. \\
+		& An unexpected deviation occurs.  \\
+		& The player disconnects. \\ \hline
+	Test case
+		& The player uses the the intended actions within its turn. \\
+		& The player gives the command to change game turn. \\ \hline
+	Alternative case
+		& The player tries to use more actions than there are in a game turn. \\
+		& The player tries to move the previous player model. \\ \hline
+	Test results 
+		& \\ \hline
+	Test comments
+		& \\ \hline
+	Improvements needed
+		& \\ \hline
+\end{tabular}
+
+
+\caption{Black Box Test: Game flow}
+\label{fig:black_box_test_5}
+\end{table}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 6
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{ID}	& \textbf{06} \\ \hline
+	Name		& Game events\\ \hline
+	Time schedule	& Approximately 10 minutes\\ \hline
+	Enviorment requirements 
+		& The test computer must have internet access. \\
+		& Regarding software, only a web browser is required. \\ \hline
+	Test risk analasys 
+		& Connection failure - Plausible \\
+		& \emph{* Try to connect again. If the error persists, use another computer.} \\
+		& \emph{* If switching computer does not resolve the connection failure, use another network.}\\ 
+		& Hardware fault - unlikely \\
+		& \emph{* Use another computer within the group.} \\ \hline
+	Goal	& The test is to verify that the game events are as intended. \\ \hline
+	Actors	& Player, Game Board, \emph{Game Session, Server}\\ \hline
+	Test requirements
+		& An expert has created a game. \\
+		& The player is inside a game session. \\ \hline
+	End requirements 
+		& The game timer resets upon the right time.\\
+		& The panic levels increase when the timer runs out.\\
+		& The panic level in the correct zones decreases when the information cards are used.\\
+		& The panic level increases in the correct zones when event cards are presented.\\
+		& The panic levels decrease when people are moved out of a zone.\\
+		& Effects from event cards are carried out as expected (i.e. the player must 
+			skip a turn or he loses 2 actions in his next turn). \\ \hline
+	Disruption criteria 
+		& The game timer does not reset upon the expected time.\\
+		& The panic levels do not increase when the time runs out.\\
+		& The panic levels do not decrease when information card effects are used.\\
+		& The panic level does not decrease when people are mowed out of a zone.\\
+		& The panic levels increase or decrease in the wrong zone when an effect is applied to the game.\\
+		& Effects from event cards are not recognized.\\
+		& The player disconnects.\\ \hline
+	Test case
+		& The player checks that the timer is reset when the time runs out.\\
+		& The player checks that the panic level is increased in all eligible zones when the time runs out.\\
+		& The player checks that the panic levels decrease in the correct zones when an information card is used.\\
+		& The player checks that the panic levels are increased in the correct zones when an event card with this effect is viewed. \\
+		& The player checks if all the effects from the event cards are upheld. \\ \hline
+	Alternative case
+		& \emph{None}\\ \hline
+	Test results 
+		& \\ \hline
+	Test comments
+		& \\ \hline
+	Improvements needed
+		& \\ \hline
+\end{tabular}
+
+
+\caption{Black Box Test: Game events}
+\label{fig:black_box_test_6}
+\end{table}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 7
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{ID}	& \textbf{07} \\ \hline
+	Name		& Testing memory overload\\ \hline
+	Time schedule	& Approximately 2 hours.\\ \hline
+	Enviorment requirements 
+		& The test computer must have internet access. \\
+		& Regarding software, only a web browser is required. \\ \hline
+	Test risk analasys 
+		& Connection failure - Plausible \\
+		& \emph{* Try to connect again. If the error persists, use another computer.} \\
+		& \emph{* If switching computer does not resolve the connection failure, use another network.}\\ 
+		& Hardware fault - unlikely \\
+		& \emph{* Use another computer within the group.} \\ \hline
+	Goal	& The test is to verify that the game does not run out of memory and can continue for an extended period of time. \\ \hline
+	Actors	& Player, Game Board, \emph{Game Session, Server} \\ \hline
+	Test requirements
+		& An expert has created a game.\\
+		& The player is inside a game session.\\ \hline
+	End requirements 
+		& The game should not run out of memory.\\ \hline
+	Disruption criteria 
+		& The game runs out of memory. \\
+		& The game freezes. \\
+		& The player disconnects.\\
+		& Unexpected faults with the game.\\ \hline
+	Test case
+		& The player(s) tries to use up as much memory as possible.\\ \hline
+	Alternative case
+		& \emph{None}\\ \hline
+	Test results 
+		& \\ \hline
+	Test comments
+		& \\ \hline
+	Improvements needed
+		& \\ \hline
+\end{tabular}
+
+
+\caption{Black Box Test: Memory Overload}
+\label{fig:black_box_test_7}
+\end{table}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 8
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{ID}	& \textbf{08} \\ \hline
+	Name		& Multiple parallel sessions\\ \hline
+	Time schedule	& Approximately 20 minutes\\ \hline
+	Enviorment requirements 
+		& The test computer must have internet access. \\
+		& Regarding software, only a web browser is required. \\ \hline
+	Test risk analasys 
+		& Connection failure - Plausible \\
+		& \emph{* Try to connect again. If the error persists, use another computer.} \\
+		& \emph{* If switching computer does not resolve the connection failure, use another network.}\\
+		& Hardware fault - unlikely \\
+		& \emph{* Use another computer within the group.} \\ \hline
+	Goal	& The test is to verify that the server is capable of running several game sessions at the same time \\ \hline
+	Actors	& Player, Game Board, \emph{Game Session, Server} \\ \hline
+	Test requirements
+		& An expert has created several games.\\
+		& A set of players are inside a game session.\\
+		& Another set of players are in another game session. \\ \hline
+	End requirements 
+		& All game sessions run smoothly, and the server is able to store the separate replays.\\ \hline
+	Disruption criteria 
+		& One session takes control of events in another session.\\
+		& The server is unable to handle the sessions, and freezes.\\
+		& A game session closes unexpectedly. \\
+		& The players disconnect.\\
+		& Unexpected faults with the server. \\ \hline
+	Test case
+		& The players enter separate game sessions.\\
+		& The players then begin playing the game as normal.\\
+		& At predetermined times, the players perform actions at the same time in the separate sessions.\\ \hline
+	Alternative case
+		& \emph{None}\\ \hline
+	Test results 
+		& \\ \hline
+	Test comments
+		& \\ \hline
+	Improvements needed
+		& \\ \hline
+\end{tabular}
+
+
+\caption{Black Box Test: Parallel sessions}
+\label{fig:black_box_test_8}
+\end{table}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 9
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{ID}	& \textbf{09} \\ \hline
+	Name		& Platform compatibility\\ \hline
+	Time schedule	& Approximately 20 minutes.\\ \hline
+	Enviorment requirements 
+		& The test computer must have internet access. \\
+		& Regarding software, a range of different web browsers are required.\\
+		& - Internet Explorer\\
+		& - Mozilla Firefox\\
+		& - Google Chrome\\
+		& - Safari\\
+		& - Opera\\ \hline
+	Test risk analasys
+		& Connection failure - Plausible \\
+		& \emph{* Try to connect again. If the error persists, use another computer.} \\
+		& \emph{* If switching computer does not resolve the connection failure, use another network.}\\
+		& Hardware fault - unlikely \\
+		& \emph{* Use another computer within the group.} \\ \hline
+	Goal	& The test is to verify that the game is compatible with different web browsers.\\ \hline
+	Actors	& Player, Game Board, \emph{Game Session, Server}\\ \hline
+	Test requirements
+		& An expert has created a game.\\
+		& The player is inside a game session.\\ \hline
+	End requirements 
+		& The game works on all platforms. \\ \hline
+	Disruption criteria 
+		& The game does not load in one of the web browsers. \\
+		& The game only works partially in one or more browsers. \\ \hline
+	Test case
+		& The player checks if the game can be loaded in all web browsers.\\
+		& The player goes through use cases 6 and 7 to check for functionality with all web browsers.\\ \hline
+	Alternative case
+		& \emph{None}\\ \hline
+	Test results 
+		& \\ \hline
+	Test comments
+		& \\ \hline
+	Improvements needed
+		& \\ \hline
+\end{tabular}
+
+\caption{Black Box Test: Game Start}
+\label{fig:black_box_test_9}
+\end{table}}
+
+
+
+
+
+
+
+
+
+
