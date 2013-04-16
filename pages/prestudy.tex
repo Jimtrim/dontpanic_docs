@@ -1,11 +1,11 @@
-\section{Prestudy}
+\chapter{Prestudy}
 \textbf{*} \emph{denotes the chosen alternative, if there were multiple choices.}
 
-\subsection{Environment}
+\section{Environment}
 The first and probably most important decision to be made in this project was to decide on a language or software to serve as a development environment. There were several good alternatives, but finding one which was suited to both the task and accessible in terms of experience needed from the developers became a minor challenge.
 
 
-\subsubsection{Front end language}
+\subsection{Front end language}
 \textbf{Java}\\
 The first and most obvious choice for any project on NTNU is Java, as it is the language used in most courses and all the team members are familiar with it. However, there are several issues when choosing Java for the front end. First of all, the ugly nature of the Swing framework is well known (although there are some alternatives). In addition, an applet in Java requires a plugin to work, if it is to be deployed on the web. A desktop version was an option, but that would limit the game to desktops only. Personal preference was also an issue with some of the developers, mostly regarding the Java’s static typing and rather verbose syntax.
 \\ \newline
@@ -19,7 +19,7 @@ This is a game development framework in C\# that runs on the xbox360 and windows
 The choice eventually fell on HTML5 as the best front end technology. With the proper browser, it runs on nearly all platforms, which was a key requirement for the game. Its simplicity in drawing 2D objects with the canvas element would be useful and make development faster. A couple of the team members were already familiar with HTML5 and JavaScript, which would present and manipulate the canvas. Furthermore, it would be useful for the whole team to increase the knowledge of JavaScript, as it is the most widespread programming language on the web.
 
 
-\subsubsection{Back end language}
+\subsection{Back end language}
 \textbf{Java}\\
 Again Java presents itself as the most obvious option, as its use as a back-end language with the Spring framework is widespread. Personal preference was one of the decisive factors, as well as productivity. Compared to the alternatives, it seemed like this would be the most time-consuming option.
 \\ \newline
@@ -30,12 +30,12 @@ With web frameworks such as Django, Flask and others, Python was quickly named a
 This platform was the most foreign to the team, yet it showed a lot of promise. First of all, the entire project could be written in one language, namely JavaScript, which would really hammer the concepts of prototyping (in JS) and give the team more experience with this popular language. Node is event-driven and relies heavily on asynchronous functions, which suited well with the imagination of producing an event-driven game. In the end, these factors made this option the best fit for making “Don’t Panic”.
 
 
-\subsubsection{Data transfer protocol}
+\subsection{Data transfer protocol}
 \textbf{JSON *}\\
 Given that all the writing would be done in JavaScript, choosing JSON (JavaScript Object Notation) was easy. As JSON looks exactly like JavaScript objects, it was easier to understand and work with JSON than for example XML, which looks more like HTML and did not really suit the needs for a simple protocol to send commands and JS objects through.
 
 
-\subsubsection{Database}
+\subsection{Database}
 \textbf{MongoDB}\\
 An analysis was made of MongoDB which actually stores the data in JSON documents instead of tables. This would be convenient, since it had already been decided to use JSON for data interchange. However none of the team members had any knowledge of MongoDB and it would be time consuming to learn it.
 \\ \newline
@@ -46,7 +46,7 @@ NoSQL is efficient for storing a large amount of data that does not necessarily 
 MySQL is the world’s most popular and used open source database. It is used by e.g. facebook, wikipedia and google. MySQL is a relational database management system and therefore fits well with the data. The team members had some experience with MySQL from earlier courses such as TDT4145 Data Modeling, Database and Database Management Systems and IT1901 Project 1. In addition the team knew that IDI could provide a MySQL database on their server, which was convenient. MongoDB seemed like a promising alternative, but this option was considered more time consuming than MySQL. That is why MySQL was chosen. 
 
 
-\subsection{Frameworks}
+\section{Frameworks}
 \textbf{Socket.io *}\\
 This is the go-to JavaScript library for real-time web applications using Websockets. It contains a client-side library that runs in the browser, and a server-side library for node.js. Like node.js, it is event-driven.
 \\ \newline
@@ -60,7 +60,7 @@ The jQuery library simplifies access to the DOM, provides animations and easy el
 This is a web development framework for node.js, that simplifies access to routing, requests and sessions. 
 
 
-\subsection{Versioning}
+\section{Versioning}
 \textbf{Subversion}\\
 This is often the standard versioning system used at NTNU, as a repository is provided by IDI, and the team members have used it in several courses already. It is a centralised system and more mature in its development than Git, the alternative. However, it is slow in comparison. Branching is cumbersome and if the central server is not available, it can cause significant trouble.
 \\ \newline
@@ -68,7 +68,7 @@ This is often the standard versioning system used at NTNU, as a repository is pr
 In Git, all clones of the repository act as a back up, and the system itself is distributed, where a clone on Github (in this case) acts as a communication channel between the users. Some of the team members already had experience using Git, and found it a lot easier and faster to setup and use in practice.
 
 
-\subsection{Project management tools and processes}
+\section{Project management tools and processes}
 \textbf{Google Drive}\\
 Google Drive is a file storage and synchronization service provided by Google that enables collaborative editing of the project documentation. For this project documentation Google docs was used. As this is a collaboration based tool, it suited the structure of the work method. 
 \\ \newline
@@ -82,7 +82,7 @@ Wbstool was used to make the work breakdown structure chart.
 Kanban is a method for developing software with an emphasis on just-in-time delivery, while making certain not to overload the developers of the system with work. At the heart of Kanban lies the Kanban board; a visual process management tool consisting of a Kanban board and cards. Each card represents a task that can be assigned to members of the development team. The board is divided into sections, separating tasks that have only been defined, from tasks that are in progress and tasks that are finished. Using this system, any member of the group can create and assign tasks to other group members, and keep an eye out for who is doing what at any given time.
 
 
-\subsection{Existing solutions}
+\section{Existing solutions}
 Since this is an original board game developed by the customer, there are no alternative electronic solutions of this game already developed. However, there is a large number of other board games that have been adapted into a digital version using various technologies.\\
 
 Examples:\\
