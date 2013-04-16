@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[12pt, a4paper]{report}
 \usepackage{semtrans}
 \usepackage[utf8]{inputenc}
 \usepackage[cm]{fullpage}
@@ -16,17 +16,17 @@
 \newcolumntype{F}[1]{>{\raggedright\arraybackslash\@minipagetrue\flushemize}p{#1}<{\endflushemize}}
 \makeatother
 
-\newenvironment{flushemize}{%
-    % You should put this outside the `list`. The new environment will make them local anyway:
-    \setlength{\itemsep}{1pt}%
-    \setlength{\parskip}{0pt}%
-    \setlength{\parsep}{0pt}%
-    \setlength{\partopsep}{0pt}%
-    \setlength{\topsep}{0pt}%
-    \setlength{\leftmargin}{12pt}%
-    % Use \list ... \endlist instead of \begin{list} ... \end{list} inside another environment
-    \list{$\bullet$}\unskip}
-    {\endlist}
+%\newenvironment{flushemize}{%
+%    % You should put this outside the `list`. The new environment will make them local anyway:
+%    \setlength{\itemsep}{1pt}%
+%    \setlength{\parskip}{0pt}%
+%    \setlength{\parsep}{0pt}%
+%    \setlength{\partopsep}{0pt}%
+%    \setlength{\topsep}{0pt}%
+%    \setlength{\leftmargin}{12pt}%
+%    % Use \list ... \endlist instead of \begin{list} ... \end{list} inside another environment
+%    \list{$\bullet$}\unskip}
+%    {\endlist}
 
 
 
@@ -46,6 +46,9 @@
 \input{pages/project_management} \pagebreak
 \input{pages/implementation} \pagebreak
 \input{pages/testing} \pagebreak
+\input{pages/final_product} \pagebreak
+\input{pages/project_evaluation} \pagebreak
+\input{pages/appendix} \pagebreak
 \input{pages/ny_seksjon} \pagebreak
 
 
