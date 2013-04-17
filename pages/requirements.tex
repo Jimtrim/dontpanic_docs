@@ -1,15 +1,27 @@
 \chapter{Requirements}
 \section{Functional requirements}
 
-\begin{itemize} \setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}
-	\item The game interface should provide experts with the ability to efficiently manage and control the players.
-	\item The players must be able to interact with the client using an I/O device.
-	\item The game interface should have elements for managing game sessions.
-	\item All game objects that exist longer than a single task, must be created and kept in storage. An object is anything from the players’ data to an invisible trigger object.
-	\item Game rules should be accepted as parameters in input. These parameters should be set by the experts through the management client. 
-	\item The expert should be able to follow a game session and comment on the tracking of the game, but should not be able to participate.
-	\item The expert should have the ability to effectively monitor the server.
-\end{itemize}
+
+FR1 - Expert Interface\\
+A crisis management expert should be able to set up a game template for teams to use. This interface should be able to configure as many variables in the game as possible(game rules), and be able to create maps, change the number of players, where they start, what events can occur and when, and create information cards.\\
+\\
+FR2 - Game Manager\\
+An expert should be able to enter an existing game as a Game Manager. The GM should be able to trigger events and modify the game objects on the fly to make the game more dynamic, as well as comment on player actions. The GM should be able to monitor activity on the server, existing sessions and online players.\\
+\\
+FR3 - Player Profiles\\
+Each player should have a profile that records the players performance in played games. This includes tracking wins and losses, listing game replays and other metrics that are relevant.\\
+\\
+FR4 - Replay\\
+An expert should be able to view finished games as a re-play, to evaluate player performance. These replays should be stored in , to be viewed at any time.\\
+\\
+FR5 - Game functionality\\
+In addition to adapting the functionality of the board game version to an electronic platform, the number of people in a zone should affect how panic spreads between zones, and inside them. \\
+\\
+FR6 - Physical interaction\\
+Preferably, the game should be able to respond to commands sent by interaction devices such as Arduino or Sifteo cubes. They could be used to represent zones, players or be used as controllers for movement.\\
+\\
+
+
 \subsection{Use cases}
 The use cases are mainly based on the functional requirements of the game and are a graphical representation of the users’ interactions with the board game. They document all the different ways in which the user can interact with the game. 
 \\
@@ -222,7 +234,7 @@ Core functions must be without game-breaking bugs to ensure functional
 correctness.
 \\\newline
 \emph{2: Operability}\\
-Ease of use is considered important, as the users should spend time playing the 
+Usability is considered important, as the users should spend time playing the 
 game and learn how to manage panic, rather than how to operate the game. 
 \\
 By exploiting recognisability from classic board games, a lot of interaction 
@@ -231,14 +243,14 @@ games.
 \\
 Users of the game will most likely not be as proficient with computers as 
 “gamers” in general. Therefore, it would be a good idea to make the game 
-accessible without having to install anything other than an internet browser.
+accessible without having to install any software other than an internet browser.
 \\\newline
 \emph{3: Transferability}\\
 The client should be usable on as many platforms as possible (Mac, Windows, 
 Linux, Mobile platforms), and in the best possible case be able to interact 
 with devices such as Arduino. HTML5 with node.js was chosen for this reason, as 
 it can run on nearly any device without the need for time consuming 
-installation procedures.
+installation procedures, thereby increasing portability.
 
 
 \subsection{Technical requirements}
