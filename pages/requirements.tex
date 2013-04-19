@@ -38,9 +38,12 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 	Start requirements & None\\ \hline
 	End requirements & - The player gets logged in.\\
 					 & - The game is displayed.\\ \hline
-	Case & - The player gets prompted with the login window. \\
-		 	& - The players gives login-info.\\
-			& - The player is now logged in.\\ \hline
+	Case & - The player clicks on the option for player, in the middle of the HTML starpage\\
+			& - The player gets prompted with the login form. \\
+		 	& - The player gives login-info.\\
+			& - The player clicks the login button to the rigth of the form.\\
+			& - The player is now logged in.\\ 
+			& - The player is moved to the player's page. \\ \hline
 	Alternative Case & Wrong password\\ \hline
 	Previous Use Case & None\\ \hline
 	Spawned Use Case & 05\\ \hline
@@ -59,9 +62,12 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 	Start requirements & None\\ \hline
 	End requirements & - The expert gets logged in.\\
 					 & - The expert view is displayed.\\ \hline
-	Case & - The expert gets prompted with the login window. \\
+	Case & -The expert clicks on the option for expert, in the middle of the HTML starpage\\
+			& - The expert gets prompted with the login form. \\
 		 	& - The expert gives login-info.\\
-			& - The expert is now logged in.\\ \hline
+			& - The expert clicks the login button to the rigth of the form.\\
+			& - The expert is now logged in.\\ 
+			& - The expert is moved to the expert's page. \\ \hline
 	Alternative Case & Wrong password\\ \hline
 	Previous Use Case & None\\ \hline
 	Spawned Use Case & 03\\ \hline
@@ -79,13 +85,16 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 	Start requirements & The expert is logged in\\ \hline
 	End requirements & The expert is able to create a game setup \\ 
 						& The expert is able to save the game setup\\ \hline
-	Case & The expert creates the appropriate map for the game.\\
-			& The expert adds the wanted board pieces.\\
-			& The expert manages the zones, the number of people and panic levels.\\
-			& The expert manages the cards, adds the wanted cards to the game.\\
-			& The expert adds the wanted number of players to the game.\\
-			& The expert assigns roles to each player. \\
-			& The expert sets the starting point for each player.\\ \hline
+	Case & The expert creates the appropriate map for the game. By ploting nodes into the canvas and creates paths between them. To create a zone the expert selects a minimun of 3 paths and clicks for create zone.\\
+			&- The expert adds the wanted board pieces by clicking on the corresponding buttons for the different game pieces, while in the wanted node. \\
+			&- The expert selects what type of zone the selected zone should be, and does this for each zone.\\
+			&- The expert set the number of people for each zone, by selecting a zone and using the initial people button at the top of the canvas.\\
+			&- The expert sets the initial panic for each zone by selecting the zone and the corresponding button for initial panic, at the top of the canvas.
+			&- The expert manages the cards, there is an initial set of cards for the game, but if the expert wants he can add more, or special cards at the top of the page, over the canvas for drawing the map.\\
+			&- The expert adds the wanted number of players to the game, by selecting a node and by using the add player button.\\
+			&- The expert can set a individual starting point to each player by selecting the wanted node and by using the button for add player at the top of the canvas.\\
+			&- The expert assigns roles to each player, by selecting a player from the form over the canvas for creating the map. \\
+			 \hline
 	Alternative Case & None \\ \hline
 	Previous Use Case & 02\\ \hline
 	Spawned Use Case & 04, 05\\ \hline
@@ -103,9 +112,8 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 	Actors & Expert, server\\ \hline
 	Start requirements & The expert is logged in, a game is running \\ \hline
 	End requirements & The expert is able to watch the wanted game\\ \hline
-	Case & The expert selects the game to watch from a list of games\\
-		 & The server provides a game window in which the expert is not\\ 
-		 & participating as a player\\ \hline
+	Case &- From the monitor game option at the top of the expert page, the expert gets a list of games in session, the expert selects one of these to start monitoring the game.\\
+		 &- The server provides a game window in which the expert is not participating as a player\\ \hline
 	Alternative Case & None \\ \hline
 	Previous Use Case & 02\\ \hline
 	Spawned Use Case & None\\ \hline
@@ -123,9 +131,9 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 	Actors & User, game session, server \\ \hline
 	Start requirements & A game has been created by the exper\\ \hline
 	End requirements & A user is able to join the appropriate game\\ \hline
-	Case & The user clicks on join options for the game\\
-			& The game asks for user info \\
-			& The user joins the game \\ \hline
+	Case & The user clicks on join options for the game in the middle of the page\\
+			&- The game asks for user info in a popup form, the user enters the info. \\
+			&- The user joins the game \\ \hline
 	Alternative Case & The user gives incorrect info and is not added to the game \\ \hline
 	Previous Use Case & 03 \\ \hline
 	Spawned Use Case & 06, 07\\ \hline
@@ -146,9 +154,9 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 	Start requirements & The player has joined a game \\
 				& The player in question has the turn \\ \hline
 	End requirements & The player is able to move the selected piece to the wanted position. \\ \hline
-	Case & The player uses the game pad to select the wanted object. \\
-		& The player drags the object to the wanted location. \\
-		& The game board is updated. \\ \hline
+	Case &- The player uses the mouse pad to select the wanted object. \\
+		&- The player drags the object through the path to the wanted location. \\
+		&- The game board is updated. \\ \hline
 	Alternative Case & The player selects an immovable object \\
 				& The player moves the object to an unobtainable location\\ \hline
 	Previous Use Case & 06 \\ \hline
@@ -171,9 +179,9 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 				& The player has an information card \\ \hline
 	End requirements & The card effect is carried out on the board\\
 				& The player does not have the used information card \\ \hline
-	Case & The player selects the information card\\
-		& The information card effect is carried out on the board\\
-		& The player loses his information card \\ \hline
+	Case & The player clicks on the wanted information card under his player profile to the side of tha canvas.\\
+		&- The information card effect is carried out on the board\\
+		&- The player loses his information card \\ \hline
 	Alternative Case & None \\ \hline
 	Previous Use Case & 05\\ \hline
 	Spawned Use Case & None\\ \hline
@@ -195,10 +203,10 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 				& A game is in action\\ \hline
 	End requirements & The player uses an action \\
 				& The effect is updated on the board \\ \hline
-	Case & The player selects an action with the gamepad\\
-		& The player selects a zone or a node\\
-		& The action is used on the target\\
-		& The game board is updated\\ \hline
+	Case &- The player selects a adjacent node or a zone with the mouse pad.\\
+		&- The player selects an action wich will appear at the top of the canvas after selecting a node or zone.\\
+		&- The action is used on the target.\\
+		&- The game board is updated.\\ \hline
 	Alternative Case & None\\ \hline
 	Previous Use Case & 05\\ \hline
 	Spawned Use Case & None\\ \hline
