@@ -58,10 +58,20 @@ Se figur over: Skal det være apostrof etter Administration?
 \subsection{Object hierarchy}
 This chart is intended to show a high level view of the hierarchy, and how the objects are connected together to avoid loops. 
 
+\subsection{Sequence diagrams}
+
+The sequence diagrams show the interactions between the files, functions and methods. It depicts the objects and files interactions in the right time sequence. The diagrams also show the calls each method or a file sends to the next file, function or method.  \\
+
+%TODO:image move_game_piecec_sekvensdiagram.jpeg
+
+The above diagram show the interaction between the JavaScript  files when a player decides to move his or hers game piece. The player initializes the sequence by clicking on the game piece in his HTML view. The first file after the HTML view is the game.js, the file that handles and interprets player inputs. The game.js file interacts with client.js which is the file handling every visual update of the game board. The file server.js Imports http and makes a server that socket.io can listen to; it connects the game interactions and game view with the engine. The file engine.js handles the game logic and game rules. When the interaction is at this point the engine.js fires a change to the client that in turn updates the view in the HTML file.\\
+
+%TODO:image use_info_cards_sekvens.jpeg
+
+The above diagram shows the interactions of the JavaScript files when a player uses an information card in the game. The sequence is very similar to the previous diagram but is different in the types of data or methods it sends between the files. At the end it updates different parts of the game (gco.update();).\\
 
 
+%TODO:image game_setup_sekvens.jpeg
 
-
-
-
+The above diagram shows the interaction of the JavaScript files when an expert creates a game, the details of this is explained thoroughly in the use cases. The expert uses the mouse pad to interact with the game.html page, and is directed to the expert interface. The file expert_interface.js is where all the dragging of the nodes, and creating and placing of the zones and players are created. When the expert is finished the game object is stored to the database. The last interactions is when game.html is updated when it get notifications from the database. The game can now be chosen from a list in game.html and played. \\
 
