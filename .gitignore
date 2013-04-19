@@ -5,3 +5,5 @@
 *.lot
 *.out
 *.toc
+
+.DS_Store
