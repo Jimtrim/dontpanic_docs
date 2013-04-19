@@ -1,14 +1,14 @@
 \chapter{Design and architecture}
 
 \section{User interface}
-\\
+
 \begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{img/earlyVersion.png}
   \caption{User interface, ' The user interface of the game, complete with a board, pieces, cards and information tables'} 
   \label{fig:earlyversion}
 \end{figure}
-\\
+
 
 
 
@@ -22,14 +22,14 @@
 The customer had already designed a physical board game of Don’t Panic, which formed the basis for designing the electronic version. In the earliest stages of the designing Balsamiq Mockups was used, an online tool for interface designing.\\
 \\
 Mockups is designed to be an easy and efficient tool used in the early stages of interface designing, and it can be used to generate click-through prototypes for interfaces. Through myBalsamiq it can also be used as a collaborative tool, supporting project-based collaboration and real-time changes.\\
-\\
+
 \begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{img/mockups.png}
   \caption{User interface, ' Early design of the board, cards and the expert interface'} 
   \label{fig:mockups}
 \end{figure}
-\\
+
 
 
 
@@ -41,7 +41,7 @@ Mockups is designed to be an easy and efficient tool used in the early stages of
   \caption{User interface, 'The canvas'} 
   \label{fig:canvas}
 \end{figure}
-\\
+
 
 The main part of the interface is the HTML5 canvas. The board and pieces of the game are all drawn within this canvas using JavaScript. The players are able to control their respective player pieces by dragging them on the board from one node to another using the mouse, like one would do using the hands when playing the physical version of the board game. One of the main goals of the project was to preserve the physical interaction of playing a board game in the electronic version, so it was decided that implementing a drag-and-drop functionality for the player pieces would be a good idea. \\
 \\
@@ -54,7 +54,6 @@ The panic levels for each zone are printed inside the zones. This was very cumbe
   \caption{User interface, 'The head table'} 
   \label{fig:headtable}
 \end{figure}
-\\
 
 An information table is placed above the canvas. This table contains the button the players would use when ending their turns, as well as buttons for placing information centers and roadblocks on the nodes they are located. The table also contains information about whose turn it is, how many turns have passed, how many actions the active player has left and a timer which counts down to the next increase in panic. \\
 \\
