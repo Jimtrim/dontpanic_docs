@@ -1,3 +1,4 @@
+
 %%%%%%%%%%%%%%%%%%%%%
 % A
 
@@ -160,3 +161,407 @@ This is a high level description of how to use the program. When the program sta
 
 
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+% C
+
+\chapter{Commentary for meetings with customer}
+%
+\emph{These are the things discussed and planed at meetings with the customer over the course of the project}
+%
+%
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{5} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& Introduction\\ \hline
+	Preparation 
+		& Introduction with group first. \\ 
+		
+	Agenda
+		& Lay down the course of the project. \\
+
+	Notes	& -Get familiar with the game, get digital copy of game rules\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 5}
+\label{fig:meeting_5}
+\end{table}}
+
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Date}	& \textbf{7} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Clarify topics within the game, expert, and users.\\ \hline
+	Preparation 
+		&  Questions are prepared. \\ 
+		
+	Agenda
+		& - Should the expert be able to follow the games progress (in the same room/different room, separate client), or is it enough for the expert to survey the games replay when the game is finished?
+	
+- Should server be able to communicate with several game sessions (clients) at a time?
+	
+- Does every player need an account for the game? Login with password?
+	
+- User profiles? What should they contain? What should the user be able to do himself with his profile? What should be stored?
+	
+- Disconnect...what should happen to the game session? Should it do a complete stop+delete progress/save state/restart game?
+	
+- Joining/leaving players. Should a session be able to allow new players in an already running game? Should it allow a player to quit and still continue the game with the other players?
+	
+- Difference between admin/expert?
+		
+- Watchers/Expert. Should they be able to remotely view the session? Should he/she be able to write notes in the client when reviewing game replay/watching session?
+	
+- Should a player be able to write notes while playing the game? Connected to the replay event? Separate document?
+		
+- Who should have access to replays? Expert, player?.  \\
+
+	Notes	& - 	Expert might decide who should be the different roles before game starts, not just drawing cards in the start of the game!
+	SAME ROOM! Should have his own client(laptop) during session for making notes in his interface.
+	At least one, perfect solution would be several sessions run on same server.
+	Info, statistics, notes expert.
+	Save state, then restart at the state later.
+	Depending on amount of players (4 or more, can still play). No new players in middle of game.
+	Admin=Technical, IT guy. Nothing do with game.
+	Redundant, see above. Player should be able to write notes while watching replays.
+	Write/store in log in profile after the game.
+	Public for users, his own games. Can share replay with others (expert can share?).\\ \hline
+	
+\end{tabular}
+
+\caption{Meeting with customer; 7}
+\label{fig:meeting_7}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{8} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Requirements\\ \hline
+	Preparation 
+		& Questions regarding requirements. \\ 
+		
+	Agenda
+		& Clarify what the game should do, how to implement, requirements for database. \\
+
+	Notes	& - The game should be as close to to original ass possible, also wants to implements users and game masters. Database should be hosted.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 8}
+\label{fig:meeting_8}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{10} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Ask questions regarding the game rules, show prototype of game\\ \hline
+	Preparation 
+		& Finish the prototype so it looks OK. Prepare questions for customer regarding rules of the game \\ 
+		
+	Agenda
+		& Customer notifyes us abut timer and cards, that we should implement this for next meeting. Otherwise happy about our progress  \\
+
+	Notes	& - Keep working on the game, focusing on implementing timer and card functionality\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 10}
+\label{fig:meeting_10}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{11} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Update on where we are with the project.\\ \hline
+	Preparation 
+		& Implemented timer and cards (at least core functionality of cards), a task given to us on prior meeting. \\ 
+		
+	Agenda
+		& Discussed how the amount of people should affect the panic level in the zones. Panic in a zone COULD be proportional to amount of people, not important. Discussed events and how they could be solved by finishing a "quest" of different steps (example: if there is a fire: move people out, block zone, put out fire). These "quests" were not a requirement, just a suggestion. Discussed use of Sifteo Cubes (an interactive game system with electronic gadgets) as a client. This was only an experiment, and not a requirement. It is important that we have a working game+client; other clients are "bonuses".  \\
+
+	Notes	& - This week we will work with the report, not the game. This was explained to the customer\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 11}
+\label{fig:meeting_11}
+\end{table}}
+
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{12} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Progress\\ \hline
+	Preparation 
+		& Create a working version of the newest implementations \\ 
+		
+	Agenda
+		& Clarify the new implementations, get feedback. \\
+
+	Notes	& - Feedbacks are good, customer is satisfied.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 13}
+\label{fig:meeting_12}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{14} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Progress\\ \hline
+	Preparation 
+		& Prepare questions for customer. \\ 
+		
+	Agenda
+		& Show the newest progress, plan next weeks implementation. \\
+
+	Notes	& - Feedbacks are good. Customer wants us to start on a additional mini project sifteo cubes, we will try to implement it to the code..\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 14}
+\label{fig:meeting_14}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{15} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Progress\\ \hline
+	Preparation 
+		& Prepare questions for customer. Get a working version of the code.\\ 
+		
+	Agenda
+		& Show the newest progress, get feedback from the customer on the new features. \\
+
+	Notes	& - Feedbacks are good, but we should start work on the sifteo cubes as soon as possible.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 15}
+\label{fig:meeting_15}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{17} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Progress\\ \hline
+	Preparation 
+		& Prepare questions for customer. Show the newest version the expert interface.\\ 
+		
+	Agenda
+		& Show the newest progress, get feedback from the customer on the new expert interface. \\
+
+	Notes	& - Feedbacks are good, but the expert interface should be more intuitive. The customer wants sound effects added to the game, especially mentioned are the sound effects for the timer. Meeting for the sifteo cubes id planned.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 17}
+\label{fig:meeting_17}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{18} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Progress\\ \hline
+	Preparation 
+		& Prepare a working version of the game, for the customer to try her self. We will have the customer go through the system usability tests.\\ 
+		
+	Agenda
+		& Show the newest progress, new version of expert interface, new sound effects, and sound track, new colors, new game master feature. Have the customer play the game. \\
+
+	Notes	& - Feedback from the newest implementations are great. The customer is very happy with the new sound effects. Some improvements are needed for the expert interface. We explain that there will be no new implementation for the game, but only modifying and making the game more sable.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 18}
+\label{fig:meeting_18}
+\end{table}}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+% D
+
+\chapter{Commentary for meeting with supervisor}
+%
+\emph{These are the commentary for the meetings with our supervisor}
+%
+%
+
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{6} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& First meeting\\ \hline
+	Preparation 
+		& Meeting with customer. Thoughts on technology and tools.\\ 
+		
+	Agenda
+		& Discuss initial strategy, process model, tools and frameworks. \\
+
+	Notes	& - See if there exits usable framework for our game. \\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with supervisor; 6}
+\label{fig:s_meeting_6}
+\end{table}}
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{8} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& Second meeting, feedback form supervisor.\\ \hline
+	Preparation 
+		& Delivered preliminary report.\\ 
+		
+	Agenda
+		& Discuss strategy, feedback for preliminary report and activity log, the progress. \\
+
+	Notes	& - Cover page, title liste of group mambers missing.\\
+& - highlevel chapters mergin, project management.\\
+& - justify the text (adjust the text/make it "look nice"?).\\
+& - reqirement (functional/non-functional) need improvement, more structures, more use cases, common misunderstading.\\
+& - non fun req, importance, What is important? Security, user friendlyness, explain.\\
+& - look for ieee stantands for non funq req, guidence.\\
+& - decided milestones, for whole semester.\\
+& - risk list's remove, network failure, risk list need more work.\\
+& - activity template, really important, not in main report, every week \\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with supervisor; 8}
+\label{fig:s_meeting_8}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{12} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& Feedback for midterm report.\\ \hline
+	Preparation 
+		& - none\\ 
+		
+	Agenda
+		& Feedback for midterm report. \\
+
+	Notes	& - Project management 2nd chapter.\\
+& - Design and architecture instead of implementation\\
+& - Requirements after prestudy\\
+& - Adjust the text\\
+& - More concrete funct. requirements, all features of the software, table of funct. req, id and link.\\
+& - Server should not be user (usecase).\\
+& - More detailed use cases.\\
+& - 2.2 iso usability or operability? portability or transportability.\\
+& - Requirements wbs.\\
+& - Lessons learned, at the end.\\
+& - Reflect the roles and task assignment.\\
+& - Two different views on client server architecture. Pattern server/client pga non fun. req.\\
+& - Add test result \\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with supervisor; 12}
+\label{fig:s_meeting_12}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{15} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& Progress and supervision\\ \hline
+	Preparation 
+		& - none\\ 
+		
+	Agenda
+		& Show supervisor our progress, with report and game development. \\
+
+	Notes	& - Report is to be handed in 19.04.2013, for a semifinal feedback. Talked about the progress of the group, and difficulties. \\
+	& - Update lessons learned.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with supervisor; 15}
+\label{fig:s_meeting_15}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{17} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& Feedback for semi final report.\\ \hline
+	Preparation 
+		& - none\\ 
+		
+	Agenda
+		& Feedback for semi final report. \\
+
+	Notes	& - New Chapter: "Iteration", after design an architecture. Show progress through iterations.\\
+& - Put all status reports in the appendix, in addition to having example in chapter 2.\\
+& - Link ALL use cases to the Functional requirements.\\
+& - Add test results, preferably with customer participating and accepting.\\
+& - Link ALL tests and test results to functional requirements.\\
+& - Write chapter 7 and 8, most important chapters.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with supervisor; 17}
+\label{fig:s_meeting_17}
+\end{table}}
