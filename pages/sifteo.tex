@@ -1,0 +1,30 @@
+\chapter{Sifteo cubes}
+
+In this section, we will present the possibilities for using Sifteo Cubes as a client for the Don't Panic server.
+
+\section{Usage for Don't Panic}
+
+As an effort to making the game more engaging, the gestures of navigating the Sifteo cubes will give the players a wider experience. We discussed with the customer about how the cubes could be used in order to make a new client. By making a physical board with each node as a custom socket, the cubes can represent players. This way, there are more possibilities of displaying the data. For instance, you could limit information by only showing the number of people of the adjacent nodes. By doing this, you force the players to move around just to find out what zones are in panic.\\
+\\
+For some of the other functionality, we came up with some ideas that we found feasible. For moving people from one zone to another, it coould be possible to have a socket or sensor in each node, and by placing a legal cube in a node, you would begin moving people "into" your cube incrementally. When you have the desired amount of people with you, the player would move the cube to the new zone, drop off the people, and the return to its original node.\\
+\\
+Since the server only needs to be able to send and recieve JSON, we are able to make a client based on any language or any component as long as it is able to read and write JSON. \\
+
+
+\section{Implementation}
+
+In order for the cubes to communicate with the Node.js server, it will be necessary to make a program translating the Sifteo events into JSON, and also translate JSON from the server to the cubes to display. We will call this program \emph{the middleman}. Since the cubes IDI got are of the first generation, the middleman needs to interpret the events from the cubes with the C\# API before sending JSON to the server. The middleman must also be able to recieve response from the server, and update the cubes accordingly. This could be achieved with some event-driven code.
+
+%TODO: Finne ut spesifikt hvilke C#-metoder som skal brukes
+
+
+\section{Recommended work}
+
+We reasearched what was already avaible for communication between the cubes and a PC. As it sands at time of writing, there is no support for doing this in the official API tha Sifteo provides. The communication between USB and the cubes are strictly limited to running the game on the PC, and sending display data for the screens. November 21, 2012, it was posted a feedback on the official developer boards with the title "Allow I/O through USB connection", where Sifteo said that runtime I/O requires updates in the cubes firmware.
+\footnote{http://support.sifteo.com/entries/22448082-Allow-I-O-through-USB-connection}\\
+\\
+However, there have been examples of people going into the code Sifteo made for their first generation cubes, and intercepting the wireless data that is not avaible in the official API.\footnote{http://thenxtstep.blogspot.no/2012/09/nxt-and-sifteo-cubes.html} 
+We have not been successful in acquiring any frameworks that does the job for us, so in order to make the Sifteo cubes able to communicate with the Don't Panic server, somebody needs to dive into the Sifteo code and find it themself. This is not a limitation by the server, but the API of the Sifteo cubes not including runtime I/O to PC. During time of writing, the site is down for maintenance, but the developer driven wiki for the first generation cubes might prove to be a good resoruce.\footnote{http://wiki.sifteocentral.com}\\
+\\
+It is difficult to estimate how long this will take to develop, seeing that we have not found a way for the cubes to communicate I/O in runtime. The time span required is dependant on prior knowledge to C\# and wireless protocols, and how the events from the cubes are structured. We do not feel we have the competance to estimate the time required to make \emph{the middleman} mantioned earlier.
+

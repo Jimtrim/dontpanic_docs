@@ -1,0 +1,40 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{semtrans}
+\usepackage[utf8]{inputenc}
+\usepackage[cm]{fullpage}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage[bottom]{footmisc}
+\usepackage[titletoc,toc,title]{appendix}
+
+
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{array}
+% Define your own types for special columns:
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\makeatletter
+\newcolumntype{F}[1]{>{\raggedright\arraybackslash\@minipagetrue\flushemize}p{#1}<{\endflushemize}}
+\makeatother
+
+% \usepackage{hyperref}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+
+\input{pages/title_page}
+\tableofcontents \pagebreak
+
+\input{pages/sifteo} \pagebreak 
+
+\begin{appendices}
+\input{pages/appendix} \pagebreak
+\end{appendices}
+
+% \listoffigures
+% \listoftables
+
+\end{document}
