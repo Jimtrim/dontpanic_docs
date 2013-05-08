@@ -1,3 +1,4 @@
+
 %%%%%%%%%%%%%%%%%%%%%
 % A
 
@@ -114,49 +115,636 @@ N.B. For a more challenging game session, switch the points 6 and 7. \\
 The game ends immediately in defeat for all players if all the map has a panic level higher than 50 panicked people. Players collectively win the game when the panic can no more spread because of the barriers, or if there is no panic on the board.
 
 \section*{User manual}
-This is a high level description of how to use the program. When the program starts, the user will have three different choises:
+This is a high level description of how to use the program. When the program starts, the user will have four different choises:\\
+%bilde av indexpage\\
+1:	Button - Play\\
+	%bilde av gameslist\\
+	1.1: A list of active game templates is displayed. Chose one of them, then the program will start a new game with the given template\\
+	%bilde av ingame\\
+	1.2: The user can now play the game by moving the players or using actions\\
+	\\
+	\\
+	1.2.1: Drog \& drop the player from one node to another to move the player\\
+	1.2.2: Button - Next player, the next players turn\\
+	1.2.3: Button - Use information card, the information card effect will affect the game state\\
+	1.2.4: Button - Move people, moves people from this zone to the next zone pressed\\
+	1.2.5: Button - Decrease panic, will decrease the panic in this zone\\
+	1.2.6: Button - Add information center, will add an information center in this node\\
+	1.2.7: Button - Add road block, will add a road block in this node\\
+	1.2.8: Button - Remove road block, will remove the road block in this node\\
+\\
+2:	Button - Expert interface\\
+\\
+	The expert interface is used to set up the game before it is played\\
+\\
+	2.1 Create new effect: Type in the wanted name, panic increase or decrease, domain, zone type to take effect and type of effect\\
+\\
+	2.1.1 Button - Add Effect(Card): Adds the new effect so it can be used in information cards\\
+\\
+	2.1.2 Button - Add Effect(Event): Adds the new effect so it can be used in events\\
+\\
+	2.2 Create/edit a event: Type in the wanted name, for the wanted effect and type a description\\
+\\
+	2.2.1 Button - Create Event: Adds the new event to this games events so this event can occur\\
+\\	
+	2.2.2 Button - Edit Event: Edits this event to the given parameters\\
+\\	
+	2.2.3 Button - Delete Event: Deletes this event from this games events\\
+\\	
+	2.2.4 Button - Remove Effect: Removes the selected effect, so that this effect can no longer be used in creating or editing events\\
+\\	
+	2.2.5 Button - Move To Edit: Sends this event to the input so it can be edited\\
+\\	
+\\	
+	2.3 Create/edit a information card: Type in the wanted name, for the wanted effect and type a description\\
+\\	
+	2.3.1 Button - Create ICard - Adds this information card to this games information cards so it can be used in the game	\\
+\\
+	2.3.2 Button - Edit ICard - Edits this information card to the given parameters\\
+\\
+	2.3.3 Button - Delete ICard - Deletes this information card from this games information cards\\
+\\
+	2.3.4 Button - Remove Effect - Removes the selected effect, so that this effect can no longer be used in creating or editing information cards\\	
+\\
+	2.3.5 Button - Move to edit: Sends this information card to the input so it can be edited\\
+\\	
+\\
+	2.4 Create a new player: Chose the wanted role and startnode of this player\\
+\\
+	2.4.1 Button - Add Player: Adds this player to the game with the selected role and startnode\\
+\\
+	2.4.2 Button - Change selected Player: Changes the selected player with the selected role and startnode\\
+\\
+	2.4.3 Button - Delete Player: Deletes this player from the game\\	
+\\	
+\\
+	2.5 Zone changing: Edits the info of the selected zone. Chose type of zone, people and panic. You can select the wanted zone to be edited in the bottom of the expert interface view where you create the map\\
+\\	
+	2.5.1 Button - Change: Changes this zone to the given parameters\\
+\\	
+\\
+	2.6	Misc info about the template: Type in author, map description, turns before events and timer before panic increase\\
+\\
+\\			
+	2.7 Creating the map: In the bottom of the expert interface view there is a grey square for creating the map\\
+\\	
+	2.7.1 Mouseclick - Left click in this square to create a new node, the selected node will be red to indicate this\\
+\\	
+	2.7.2 Drag \& drop - Press a node and drag it where you want it\\ 	
+\\	
+	2.7.3 Button - Delete node(D): Deletes the selected node from the map, D is the shortcut for this action on the keyboard\\
+\\
+	2.7.4 Button - Start node connection(C): Starts a node connection from the selected node to the next pressed node, a black line will mark this\\
+\\
+	2.7.5 Button - Add zone node(A): Adds the selected node to a zone (all nodes connected must be added to a zone before a zone can be created), the node will turn blue to indicate this\\
+\\	
+	2.7.6 Button - Clear zone nodes: Clears all the nodes that are a zone node, the blue zones will turn white\\
+\\
+	2.7.8 Button - Create zone(Z): Creates a zone if the nodes are all connected and the nodes are zone nodes\\	
+\\
+	2.7.9 Button - Delete zone(D): Deletes the selected zone\\
+\\
+3: 	Button - Game Master\\
+	%bilde av gamemaster\\
+	3.1: A list of games in progress is displayed. Chose one of them to enter that game\\
+	%bilde av ingame\\
+	3.2: The game master can now watch the game as well as interact with the game as a player can\\
+\\
+	4: 	Button - Watch replay\\
+	%bilde av replaylist\\
+	4.1: A list of games that already has been played, is displayed. Chose one of them, then the program will enter the given replay\\
+	%bilde av replay, ta bilde\\
+	4.2: The chosen replay will be displayed\\
+	\\
+	4.2.1 Button - Previous action: will display the previous game state\\
+	4.2.2 Button - Next action: will display the next game state\\
+\\
+%%%%%%%%%%%%%%%%%%%%%
+% C
 
-1:	Button - Play
+\chapter{Commentary for meetings with customer}
+%
+\emph{These are the things discussed and planed at meetings with the customer over the course of the project}
+%
+%
 
-	1.1: A list of active game templates is displayed. Chose one of them, then the program will start a new game with the given template.
-	
-	1.2: The user can now play the game by moving the players or using actions. 
-
-2: 	Button - Watch replay
-
-	2.1: A list of games that already has been played, is displayed. Chose one of them, then the program will enter the given replay.
-	
-	2.2: Press the "next" button to show the next action.
-
-3:	Button - Expert interface
-
-	The expert interface is used to set up the game before it is played. 
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{5} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& Introduction\\ \hline
+	Preparation 
+		& Introduction with group first. \\ 
 		
-	Button - Add effect, set wanted effect.
-	
-	Button - Add role, set wanted role.
-	
-	Button - Add player, set role and startnode for the player.
+	Agenda
+		& Lay down the course of the project. \\
 
-	Button - Start!, starts the canvas so the user can create the map.
+	Notes	& -Get familiar with the game, get digital copy of game rules\\ \hline
+	
+\end{tabular}
 
-	Mouse click on canvas - adds a new node to the map. 
 
-	Button - Delete node, deletes the selected node from the map.
+\caption{Meeting with customer; 5}
+\label{fig:meeting_5}
+\end{table}}
+
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Date}	& \textbf{7} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Clarify topics within the game, expert, and users.\\ \hline
+	Preparation 
+		&  Questions are prepared. \\ 
+		
+	Agenda
+		& - Should the expert be able to follow the games progress (in the same room/different room, separate client), or is it enough for the expert to survey the games replay when the game is finished?
 	
-	Button - Start node connection, starts a node connection in the selected zone and connects it to the next node that is selected.
+- Should server be able to communicate with several game sessions (clients) at a time?
 	
-	Button - Add zone node, adds a node to a zone. 
+- Does every player need an account for the game? Login with password?
 	
-	Button - Clear zone node, removes a node from a zone. 
+- User profiles? What should they contain? What should the user be able to do himself with his profile? What should be stored?
 	
-	Button - Create zone, creates a zone if the nodes around it are zone nodes.
+- Disconnect...what should happen to the game session? Should it do a complete stop+delete progress/save state/restart game?
 	
-	Button - Delete zone, deletes the selected zone.
+- Joining/leaving players. Should a session be able to allow new players in an already running game? Should it allow a player to quit and still continue the game with the other players?
 	
-	Button - Set people, sets how many people in the selected zone.
+- Difference between admin/expert?
+		
+- Watchers/Expert. Should they be able to remotely view the session? Should he/she be able to write notes in the client when reviewing game replay/watching session?
 	
- 	Button - Set panic, sets the panic level in the selected zone. 
+- Should a player be able to write notes while playing the game? Connected to the replay event? Separate document?
+		
+- Who should have access to replays? Expert, player?.  \\
+
+	Notes	& - 	Expert might decide who should be the different roles before game starts, not just drawing cards in the start of the game!
+	SAME ROOM! Should have his own client(laptop) during session for making notes in his interface.
+	At least one, perfect solution would be several sessions run on same server.
+	Info, statistics, notes expert.
+	Save state, then restart at the state later.
+	Depending on amount of players (4 or more, can still play). No new players in middle of game.
+	Admin=Technical, IT guy. Nothing do with game.
+	Redundant, see above. Player should be able to write notes while watching replays.
+	Write/store in log in profile after the game.
+	Public for users, his own games. Can share replay with others (expert can share?).\\ \hline
+	
+\end{tabular}
+
+\caption{Meeting with customer; 7}
+\label{fig:meeting_7}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{8} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Requirements\\ \hline
+	Preparation 
+		& Questions regarding requirements. \\ 
+		
+	Agenda
+		& Clarify what the game should do, how to implement, requirements for database. \\
+
+	Notes	& - The game should be as close to to original ass possible, also wants to implements users and game masters. Database should be hosted.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 8}
+\label{fig:meeting_8}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{10} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Ask questions regarding the game rules, show prototype of game\\ \hline
+	Preparation 
+		& Finish the prototype so it looks OK. Prepare questions for customer regarding rules of the game \\ 
+		
+	Agenda
+		& Customer notifyes us abut timer and cards, that we should implement this for next meeting. Otherwise happy about our progress  \\
+
+	Notes	& - Keep working on the game, focusing on implementing timer and card functionality\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 10}
+\label{fig:meeting_10}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{11} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Update on where we are with the project.\\ \hline
+	Preparation 
+		& Implemented timer and cards (at least core functionality of cards), a task given to us on prior meeting. \\ 
+		
+	Agenda
+		& Discussed how the amount of people should affect the panic level in the zones. Panic in a zone COULD be proportional to amount of people, not important. Discussed events and how they could be solved by finishing a "quest" of different steps (example: if there is a fire: move people out, block zone, put out fire). These "quests" were not a requirement, just a suggestion. Discussed use of Sifteo Cubes (an interactive game system with electronic gadgets) as a client. This was only an experiment, and not a requirement. It is important that we have a working game+client; other clients are "bonuses".  \\
+
+	Notes	& - This week we will work with the report, not the game. This was explained to the customer\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 11}
+\label{fig:meeting_11}
+\end{table}}
+
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{12} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Progress\\ \hline
+	Preparation 
+		& Create a working version of the newest implementations \\ 
+		
+	Agenda
+		& Clarify the new implementations, get feedback. \\
+
+	Notes	& - Feedbacks are good, customer is satisfied.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 13}
+\label{fig:meeting_12}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{14} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Progress\\ \hline
+	Preparation 
+		& Prepare questions for customer. \\ 
+		
+	Agenda
+		& Show the newest progress, plan next weeks implementation. \\
+
+	Notes	& - Feedbacks are good. Customer wants us to start on a additional mini project sifteo cubes, we will try to implement it to the code..\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 14}
+\label{fig:meeting_14}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{15} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Progress\\ \hline
+	Preparation 
+		& Prepare questions for customer. Get a working version of the code.\\ 
+		
+	Agenda
+		& Show the newest progress, get feedback from the customer on the new features. \\
+
+	Notes	& - Feedbacks are good, but we should start work on the sifteo cubes as soon as possible.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 15}
+\label{fig:meeting_15}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{17} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Progress\\ \hline
+	Preparation 
+		& Prepare questions for customer. Show the newest version the expert interface.\\ 
+		
+	Agenda
+		& Show the newest progress, get feedback from the customer on the new expert interface. \\
+
+	Notes	& - Feedbacks are good, but the expert interface should be more intuitive. The customer wants sound effects added to the game, especially mentioned are the sound effects for the timer. Meeting for the sifteo cubes id planned.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 17}
+\label{fig:meeting_17}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{18} \\ \hline
+	Called	By		& Customer\\ \hline
+	Purpose		& Progress\\ \hline
+	Preparation 
+		& Prepare a working version of the game, for the customer to try her self. We will have the customer go through the system usability tests.\\ 
+		
+	Agenda
+		& Show the newest progress, new version of expert interface, new sound effects, and sound track, new colors, new game master feature. Have the customer play the game. \\
+
+	Notes	& - Feedback from the newest implementations are great. The customer is very happy with the new sound effects. Some improvements are needed for the expert interface. We explain that there will be no new implementation for the game, but only modifying and making the game more sable.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with customer; 18}
+\label{fig:meeting_18}
+\end{table}}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+% D
+
+\chapter{Commentary for meeting with supervisor}
+%
+\emph{These are the commentary for the meetings with our supervisor}
+%
+%
+
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{6} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& First meeting\\ \hline
+	Preparation 
+		& Meeting with customer. Thoughts on technology and tools.\\ 
+		
+	Agenda
+		& Discuss initial strategy, process model, tools and frameworks. \\
+
+	Notes	& - See if there exits usable framework for our game. \\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with supervisor; 6}
+\label{fig:s_meeting_6}
+\end{table}}
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{8} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& Second meeting, feedback form supervisor.\\ \hline
+	Preparation 
+		& Delivered preliminary report.\\ 
+		
+	Agenda
+		& Discuss strategy, feedback for preliminary report and activity log, the progress. \\
+
+	Notes	& - Cover page, title liste of group mambers missing.\\
+& - highlevel chapters mergin, project management.\\
+& - justify the text (adjust the text/make it "look nice"?).\\
+& - reqirement (functional/non-functional) need improvement, more structures, more use cases, common misunderstading.\\
+& - non fun req, importance, What is important? Security, user friendlyness, explain.\\
+& - look for ieee stantands for non funq req, guidence.\\
+& - decided milestones, for whole semester.\\
+& - risk list's remove, network failure, risk list need more work.\\
+& - activity template, really important, not in main report, every week \\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with supervisor; 8}
+\label{fig:s_meeting_8}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{12} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& Feedback for midterm report.\\ \hline
+	Preparation 
+		& - none\\ 
+		
+	Agenda
+		& Feedback for midterm report. \\
+
+	Notes	& - Project management 2nd chapter.\\
+& - Design and architecture instead of implementation\\
+& - Requirements after prestudy\\
+& - Adjust the text\\
+& - More concrete funct. requirements, all features of the software, table of funct. req, id and link.\\
+& - Server should not be user (usecase).\\
+& - More detailed use cases.\\
+& - 2.2 iso usability or operability? portability or transportability.\\
+& - Requirements wbs.\\
+& - Lessons learned, at the end.\\
+& - Reflect the roles and task assignment.\\
+& - Two different views on client server architecture. Pattern server/client pga non fun. req.\\
+& - Add test result \\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with supervisor; 12}
+\label{fig:s_meeting_12}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{15} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& Progress and supervision\\ \hline
+	Preparation 
+		& - none\\ 
+		
+	Agenda
+		& Show supervisor our progress, with report and game development. \\
+
+	Notes	& - Report is to be handed in 19.04.2013, for a semifinal feedback. Talked about the progress of the group, and difficulties. \\
+	& - Update lessons learned.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with supervisor; 15}
+\label{fig:s_meeting_15}
+\end{table}}
+
+
+{\footnotesize
+\begin{table}[H]
+\begin{tabular}{| p{5cm} | p{10cm} |}\hline
+	\textbf{Week}	& \textbf{17} \\ \hline
+	Called	By		& Group\\ \hline
+	Purpose		& Feedback for semi final report.\\ \hline
+	Preparation 
+		& - none\\ 
+		
+	Agenda
+		& Feedback for semi final report. \\
+
+	Notes	& - New Chapter: "Iteration", after design an architecture. Show progress through iterations.\\
+& - Put all status reports in the appendix, in addition to having example in chapter 2.\\
+& - Link ALL use cases to the Functional requirements.\\
+& - Add test results, preferably with customer participating and accepting.\\
+& - Link ALL tests and test results to functional requirements.\\
+& - Write chapter 7 and 8, most important chapters.\\ \hline
+	
+\end{tabular}
+
+
+\caption{Meeting with supervisor; 17}
+\label{fig:s_meeting_17}
+\end{table}}
+
+\section*{Status reports}
+
+Here is the status reports that were sent to the supervisor. Some status reports were given orally during the meetings with the supervisor. 
+
+Status report week 18\\
+\\
+1. Introduction\\
+Starting to feel the pressure for the deadline and exams\\
+\\
+2. Progress\\
+Replay is now finished as well as the game master interface, expert interface is very close to finish. We have done system usability test with the customer. And the research of sifteo cubes is done. Cleaning up the code and writing on the report has also been worked on.\\
+\\
+3. Open / closed problems\\
+No problems this week\\
+\\
+4. Planned work for next period\\
+Report, bug fixing, code commenting, code completion.\\
+\\
+5. Updated risks analysis\\
+No risks updated\\
+\\
+Status report week 17\\
+
+1. Introduction\\
+Forgot to send you on friday, so will send you now instead.\\
+\\
+2. Progress\\
+We have finished templates from database, started on the replay function and sifteo cubes. We also improved the expert interface.\\
+\\
+3. Open / closed problems\\
+Problem with sifteo cubes communicating with the pc.\\
+\\
+4. Planned work for next period\\
+Finish replay and expert interface (could take some time). Acceptance test with customer. Start on game master interface for intervening with a game in progress.\\
+\\
+5. Updated risks analysis\\
+No risks updated\\
+
+Status report week 16\\
+\\
+1. Introduction\\
+Had a meeting with the customer, been working on the report.\\
+\\
+2. Progress\\
+We can now get game templates from the database and use them in the game. However a bit buggy yet. The expert interface has been improved, but not yet finished. Been writing on the report for delivery this week. \\
+\\
+3. Open / closed problems\\
+Had some problems with exporting our report from google drive to LaTeX. Only one member of the group has experience with LaTeX, and he has been very busy this week. \\
+\\
+4. Planned work for next period\\
+Finish templates from database, finish expert interface (not sure how long this will take), start on replay function, start on sifteo cubes (tangible interface for the game). \\
+\\
+5. Updated risks analysis\\
+No risks updated\\
+\\
+\\
+Status report week 14\\
+\\
+1. Introduction\\
+This week has been very short because of the easter holidays. \\
+\\
+2. Progress\\
+We have optimized new graphics to the game. It is now pictures of the different city areas instead of colors on the zones. In addition the database is taking longer than expected and is constantly being worked on. Roles have been partially implemented, but still some work left. Research of sifteo cubes is done, but not discussed further with the customer. \\
+\\
+We did not have time this week for starting on the replay function.\\
+\\
+3. Open / closed problems\\
+No problems other than tasks taking longer time than expected. \\
+\\
+4. Planned work for next period\\
+Finish roles, make events after each player action, make the information cards more complete, hopefully start on replay and expert interface if we have enough time.\\
+\\
+5. Updated risks analysis\\
+No risks updated\\
+\\
+\\
+Status report week 11\\
+1. Introduction\\
+This week we have focused on the mid term project report\\
+\\
+2. Progress\\
+Information center and road block functionality for proper placing is now added. The mid term project report is now done. \\
+\\
+3. Open / closed problems\\
+We had no time for adding roles this week. Will add roles next week instead. \\
+\\
+4. Planned work for next period\\
+Finishing database queries, research of sifteo cubes, add roles, start on the replay\\
+\\
+5. Updated risks analysis\\
+No risks updated\\
+
+Status report week 10\\
+1. Introduction\\
+We now have a working prototype!\\
+\\
+2. Progress summary\\
+Players can now move and de-panic zones, and turns are implemented. A timer for increased panic is implemented. Drawing functinality for objects are in place. The database connection is now up and running. Css implemented for nice looks. Message passing between client and server (with json).
+\\
+3. Open closed problems\\
+Database connection was a huge problem, turned out that IDI had a firewall turned on. Much time wasted due to error detection in our code (which was pretty much correct all the time).\\
+\\
+4. Planned work for next period\\
+Database queries, event and information cards, roles, figure out how to implement effects (could be tricky). Documentation as always. Finishing the requirements for the midterm report.\\
+\\
+5. Updated risks analysis\\
+No updates needed\\
+\\
+
+Status report week 9\\
+1. Introduction\\
+Hey, here comes our status report.\\
+
+2. Progress summary\\
+We are now done with the architecture of the system. We've also started on a client/server framework and they can now communicate with each other. In addition we've just started on the game rules on the server. \\
+\\
+3. Open closed problems\\ 
+A problem we had was that there was many solutions to the different problems like communicating between server and client. We used some time to discuss and choose these solutions. \\
+
+4. Planned work for next period\\ 
+Next period we want to continue working on the server side with the game rules.\\
+
+5. Updated risks analysis\\
+No updates needed
 
 %%%%%%%%%%%%%%%%%%%%%%
 % C
