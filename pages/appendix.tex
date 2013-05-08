@@ -115,55 +115,110 @@ N.B. For a more challenging game session, switch the points 6 and 7. \\
 The game ends immediately in defeat for all players if all the map has a panic level higher than 50 panicked people. Players collectively win the game when the panic can no more spread because of the barriers, or if there is no panic on the board.
 
 \section*{User manual}
-This is a high level description of how to use the program. When the program starts, the user will have three different choises:
-
-1:	Button - Play
-
-	1.1: A list of active game templates is displayed. Chose one of them, then the program will start a new game with the given template.
-	
-	1.2: The user can now play the game by moving the players or using actions. 
-
-2: 	Button - Watch replay
-
-	2.1: A list of games that already has been played, is displayed. Chose one of them, then the program will enter the given replay.
-	
-	2.2: Press the "next" button to show the next action.
-
-3:	Button - Expert interface
-
-	The expert interface is used to set up the game before it is played. 
-		
-	Button - Add effect, set wanted effect.
-	
-	Button - Add role, set wanted role.
-	
-	Button - Add player, set role and startnode for the player.
-
-	Button - Start!, starts the canvas so the user can create the map.
-
-	Mouse click on canvas - adds a new node to the map. 
-
-	Button - Delete node, deletes the selected node from the map.
-	
-	Button - Start node connection, starts a node connection in the selected zone and connects it to the next node that is selected.
-	
-	Button - Add zone node, adds a node to a zone. 
-	
-	Button - Clear zone node, removes a node from a zone. 
-	
-	Button - Create zone, creates a zone if the nodes around it are zone nodes.
-	
-	Button - Delete zone, deletes the selected zone.
-	
-	Button - Set people, sets how many people in the selected zone.
-	
- 	Button - Set panic, sets the panic level in the selected zone. 
-
-
-
-
-
-
+This is a high level description of how to use the program. When the program starts, the user will have four different choises:\\
+%bilde av indexpage\\
+1:	Button - Play\\
+	%bilde av gameslist\\
+	1.1: A list of active game templates is displayed. Chose one of them, then the program will start a new game with the given template\\
+	%bilde av ingame\\
+	1.2: The user can now play the game by moving the players or using actions\\
+	\\
+	\\
+	1.2.1: Drog \& drop the player from one node to another to move the player\\
+	1.2.2: Button - Next player, the next players turn\\
+	1.2.3: Button - Use information card, the information card effect will affect the game state\\
+	1.2.4: Button - Move people, moves people from this zone to the next zone pressed\\
+	1.2.5: Button - Decrease panic, will decrease the panic in this zone\\
+	1.2.6: Button - Add information center, will add an information center in this node\\
+	1.2.7: Button - Add road block, will add a road block in this node\\
+	1.2.8: Button - Remove road block, will remove the road block in this node\\
+\\
+2:	Button - Expert interface\\
+\\
+	The expert interface is used to set up the game before it is played\\
+\\
+	2.1 Create new effect: Type in the wanted name, panic increase or decrease, domain, zone type to take effect and type of effect\\
+\\
+	2.1.1 Button - Add Effect(Card): Adds the new effect so it can be used in information cards\\
+\\
+	2.1.2 Button - Add Effect(Event): Adds the new effect so it can be used in events\\
+\\
+	2.2 Create/edit a event: Type in the wanted name, for the wanted effect and type a description\\
+\\
+	2.2.1 Button - Create Event: Adds the new event to this games events so this event can occur\\
+\\	
+	2.2.2 Button - Edit Event: Edits this event to the given parameters\\
+\\	
+	2.2.3 Button - Delete Event: Deletes this event from this games events\\
+\\	
+	2.2.4 Button - Remove Effect: Removes the selected effect, so that this effect can no longer be used in creating or editing events\\
+\\	
+	2.2.5 Button - Move To Edit: Sends this event to the input so it can be edited\\
+\\	
+\\	
+	2.3 Create/edit a information card: Type in the wanted name, for the wanted effect and type a description\\
+\\	
+	2.3.1 Button - Create ICard - Adds this information card to this games information cards so it can be used in the game	\\
+\\
+	2.3.2 Button - Edit ICard - Edits this information card to the given parameters\\
+\\
+	2.3.3 Button - Delete ICard - Deletes this information card from this games information cards\\
+\\
+	2.3.4 Button - Remove Effect - Removes the selected effect, so that this effect can no longer be used in creating or editing information cards\\	
+\\
+	2.3.5 Button - Move to edit: Sends this information card to the input so it can be edited\\
+\\	
+\\
+	2.4 Create a new player: Chose the wanted role and startnode of this player\\
+\\
+	2.4.1 Button - Add Player: Adds this player to the game with the selected role and startnode\\
+\\
+	2.4.2 Button - Change selected Player: Changes the selected player with the selected role and startnode\\
+\\
+	2.4.3 Button - Delete Player: Deletes this player from the game\\	
+\\	
+\\
+	2.5 Zone changing: Edits the info of the selected zone. Chose type of zone, people and panic. You can select the wanted zone to be edited in the bottom of the expert interface view where you create the map\\
+\\	
+	2.5.1 Button - Change: Changes this zone to the given parameters\\
+\\	
+\\
+	2.6	Misc info about the template: Type in author, map description, turns before events and timer before panic increase\\
+\\
+\\			
+	2.7 Creating the map: In the bottom of the expert interface view there is a grey square for creating the map\\
+\\	
+	2.7.1 Mouseclick - Left click in this square to create a new node, the selected node will be red to indicate this\\
+\\	
+	2.7.2 Drag \& drop - Press a node and drag it where you want it\\ 	
+\\	
+	2.7.3 Button - Delete node(D): Deletes the selected node from the map, D is the shortcut for this action on the keyboard\\
+\\
+	2.7.4 Button - Start node connection(C): Starts a node connection from the selected node to the next pressed node, a black line will mark this\\
+\\
+	2.7.5 Button - Add zone node(A): Adds the selected node to a zone (all nodes connected must be added to a zone before a zone can be created), the node will turn blue to indicate this\\
+\\	
+	2.7.6 Button - Clear zone nodes: Clears all the nodes that are a zone node, the blue zones will turn white\\
+\\
+	2.7.8 Button - Create zone(Z): Creates a zone if the nodes are all connected and the nodes are zone nodes\\	
+\\
+	2.7.9 Button - Delete zone(D): Deletes the selected zone\\
+\\
+3: 	Button - Game Master\\
+	%bilde av gamemaster\\
+	3.1: A list of games in progress is displayed. Chose one of them to enter that game\\
+	%bilde av ingame\\
+	3.2: The game master can now watch the game as well as interact with the game as a player can\\
+\\
+	4: 	Button - Watch replay\\
+	%bilde av replaylist\\
+	4.1: A list of games that already has been played, is displayed. Chose one of them, then the program will enter the given replay\\
+	%bilde av replay, ta bilde\\
+	4.2: The chosen replay will be displayed\\
+	\\
+	4.2.1 Button - Previous action: will display the previous game state\\
+	4.2.2 Button - Next action: will display the next game state\\
+\\
 %%%%%%%%%%%%%%%%%%%%%
 % C
 
