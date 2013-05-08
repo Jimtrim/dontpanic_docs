@@ -6,12 +6,15 @@
 \usepackage{float}
 \usepackage{longtable}
 \usepackage[bottom]{footmisc}
+\usepackage{cite}
+\usepackage{url}
 
-\usepackage{biblatex}
+% \usepackage{biblatex}
 
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{array}
+
 % Define your own types for special columns:
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \makeatletter
@@ -37,7 +40,7 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 
-\bibliography{pages/bibliography}
+
 \begin{document}
 
 
@@ -55,7 +58,11 @@
 \input{pages/sifteo} \pagebreak 
 \input{pages/appendix} \pagebreak
 
-\printbibliography
+
+
+\bibliographystyle{plain}
+% \nocite{website:Sifteo}
+\bibliography{bib}{}
 
 \listoffigures
 \listoftables
