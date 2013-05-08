@@ -2,60 +2,56 @@
 
 \section{Completed features}
 
-FR1 - Expert Interface
-This feature is largely finished. It includes the ability to design a city map, set variables(rules) for the game, create event- and information cards used during a game and set the number of players and where they start. It could use some design work to make the experience more intuitive and conform to the design of the site.
-\\
-FR2 - Game Manager
-An expert has the ability to monitor games in progress, shut them down and control the game pieces in real time, without having to wait for the active player's turn.
-\\
-FR5 - Game Functionality
-This is first and foremost all the functionality of the original board game, as specified in the appendix, and is the most comprehensive requirement. All of these core functions are completed, and work as intended.
-\\
+FR1 - Expert Interface\\
+This feature is largely finished. It includes the ability to design a city map, set variables(rules) for the game, create event- and information cards used during a game and set the number of players and where they start. It could use some design work to make the experience more intuitive and conform to the design of the site.\\
+
+FR2 - Game Manager\\
+An expert has the ability to monitor games in progress, shut them down and control the game pieces in real time, without having to wait for the active player's turn.\\
+
+FR5 - Game Functionality\\
+This is first and foremost all the functionality of the original board game, as specified in the appendix, and is the most comprehensive requirement. All of these core functions are completed, and work as intended.\\
 
 FR4 - Replay\\
-
 Experts have the ability to review a game that has been played, to evaluate player performance and desicionmaking. All played games are automatically saved as they are played, and will be recorded whether the game finished or not, and whether the client disconnected by accident or ended the game.
 
 \section{Uncompleted features}
 
 FR2 - Game Manager \\
-The ability to create effects and cards dynamically and send them to be executed in real-time has not been implemented. The Game manager can not close all games at once with one command, but has to enter each room and press the "End Game" button. The GM can not take notes in the game, and has to do this manually outsite the game.
-\\
+The ability to create effects and cards dynamically and send them to be executed in real-time has not been implemented. The Game manager can not close all games at once with one command, but has to enter each room and press the "End Game" button. The GM can not take notes in the game, and has to do this manually outsite the game.\\
 
 FR3 - Player Profiles\\
-Due to time constraints and more pressing features, this requirement was not prioritized as it would have taken a lot of time away from finishing other game related features.
-\\
-FR6 - Physical Interaction\\
+Due to time constraints and more pressing features, this requirement was not prioritized as it would have taken a lot of time away from finishing other game related features.\\
 
-This requirement came up some time after the planning phase, and required a lot of expertise to be realized. It was decided, in discussions with the customer, to instead estimate the time required to flesh out such a feature, and research possible integration approaches. This requirement has its own chapter in this report.
-\\
+FR6 - Physical Interaction\\
+This requirement came up some time after the planning phase, and required a lot of expertise to be realized. It was decided, in discussions with the customer, to instead estimate the time required to flesh out such a feature, and research possible integration approaches. This requirement has its own chapter in this report.\\
+
 \section{Additional features}
 
 
-Language
-The client has the ability to translate most of the site into desired languages. The customer expressed a need for language support other than English. In compliance with the Context Covarage non-functional requirement, this feature was added in addition to the functional requirements. Supported languages so far are Norwegian and English, but more languages can easily be added by copying the "en" JSON formatted object in lang.js and replacing the label values.
-\\
-Map Editor
-The ability for an Expert to dynamically create a map, and not having to rely on pre-made maps, was added to the expert interface as an additional feature. This was considered important in regards to the Context Covarage non-functional requirement.
-\\
-Sound
-The customer wanted more feedback from the game, and it was decided to add both sound effects for the majority of functions, as well as background music for the index page and the game page. A player is also able to hear when the timer is reaching zero.
-\\
-Feedback
+Language\\
+The client has the ability to translate most of the site into desired languages. The customer expressed a need for language support other than English. In compliance with the Context Covarage non-functional requirement, this feature was added in addition to the functional requirements. Supported languages so far are Norwegian and English, but more languages can easily be added by copying the "en" JSON formatted object in lang.js and replacing the label values.\\
+
+Map Editor\\
+The ability for an Expert to dynamically create a map, and not having to rely on pre-made maps, was added to the expert interface as an additional feature. This was considered important in regards to the Context Covarage non-functional requirement.\\
+
+Sound\\
+The customer wanted more feedback from the game, and it was decided to add both sound effects for the majority of functions, as well as background music for the index page and the game page. A player is also able to hear when the timer is reaching zero.\\
+
+Feedback\\
 Feedback is an important aspect of any game, and adds to the usability requirement. A status label and an error label was added to notify the player of what was happening, and what the player did wrong. 
 
 
 \section{Suggestions for further development}
 
-In addition to completing the functional requirements, these extensions to the existing game have been suggested in discussions with the customer.
-\\
-Events as "quests":
-Currently, events are simple triggers for a list of effects that take effect immediately, and cannot be stopped or specifically countered except by playing the game normally. By extending this feature to include "tasks" to be completed, like "quests" in RPGs, the game would be come more dynamic and varied. These task would include a list of actions the players have to complete in order to get a reward, or avoid a penalty. If a fire is not put out in a certain amount of rounds, for example, you could lose points or the zone could become permanently panicked.
-\\
-Effect variation:
-Further iteration on the "effect" function can increase the number of possible effects that can be made, both for events and information cards. The ability for effects to move players, destroy pathways, and manipulate road blocks could be added, for example.
-\\
-Mobile integration:
+In addition to completing the functional requirements, these extensions to the existing game have been suggested in discussions with the customer.\\
+
+Events as "quests"\\
+Currently, events are simple triggers for a list of effects that take effect immediately, and cannot be stopped or specifically countered except by playing the game normally. By extending this feature to include "tasks" to be completed, like "quests" in RPGs, the game would be come more dynamic and varied. These task would include a list of actions the players have to complete in order to get a reward, or avoid a penalty. If a fire is not put out in a certain amount of rounds, for example, you could lose points or the zone could become permanently panicked.\\
+
+Effect variation\\
+Further iteration on the "effect" function can increase the number of possible effects that can be made, both for events and information cards. The ability for effects to move players, destroy pathways, and manipulate road blocks could be added, for example.\\
+
+Mobile integration\\
 Although most mobile devices are too small to fit the whole game, they could be used to hold player information, information cards and other relevant data for the player. They could also be used as log-in devices, and contain the player's profile.
 
 
