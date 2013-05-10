@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{book:JavascriptGoodParts}
+Douglas Crockford.
+\newblock {\em JavaScript, the Good Parts}.
+\newblock O'Reilly Media / Yahoo Press.
+
+\bibitem{website:Sifteo}
+Sifteo Inc.
+\newblock The offical faq for sifteo cubes.
+\newblock \url{http://www.sifteo.com/faq}, March 2013.
+
+\bibitem{book:ProHTML5Games}
+Aditya~Ravi Shankar.
+\newblock {\em Pro HTML5 Games}.
+\newblock Apress, first edition, December.
+
+\end{thebibliography}
