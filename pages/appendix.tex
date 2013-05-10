@@ -115,55 +115,110 @@ N.B. For a more challenging game session, switch the points 6 and 7. \\
 The game ends immediately in defeat for all players if all the map has a panic level higher than 50 panicked people. Players collectively win the game when the panic can no more spread because of the barriers, or if there is no panic on the board.
 
 \section*{User manual}
-This is a high level description of how to use the program. When the program starts, the user will have three different choises:
-
-1:	Button - Play
-
-	1.1: A list of active game templates is displayed. Chose one of them, then the program will start a new game with the given template.
-	
-	1.2: The user can now play the game by moving the players or using actions. 
-
-2: 	Button - Watch replay
-
-	2.1: A list of games that already has been played, is displayed. Chose one of them, then the program will enter the given replay.
-	
-	2.2: Press the "next" button to show the next action.
-
-3:	Button - Expert interface
-
-	The expert interface is used to set up the game before it is played. 
-		
-	Button - Add effect, set wanted effect.
-	
-	Button - Add role, set wanted role.
-	
-	Button - Add player, set role and startnode for the player.
-
-	Button - Start!, starts the canvas so the user can create the map.
-
-	Mouse click on canvas - adds a new node to the map. 
-
-	Button - Delete node, deletes the selected node from the map.
-	
-	Button - Start node connection, starts a node connection in the selected zone and connects it to the next node that is selected.
-	
-	Button - Add zone node, adds a node to a zone. 
-	
-	Button - Clear zone node, removes a node from a zone. 
-	
-	Button - Create zone, creates a zone if the nodes around it are zone nodes.
-	
-	Button - Delete zone, deletes the selected zone.
-	
-	Button - Set people, sets how many people in the selected zone.
-	
- 	Button - Set panic, sets the panic level in the selected zone. 
-
-
-
-
-
-
+This is a high level description of how to use the program. When the program starts, the user will have four different choises:\\
+%bilde av indexpage\\
+1:	Button - Play\\
+	%bilde av gameslist\\
+	1.1: A list of active game templates is displayed. Chose one of them, then the program will start a new game with the given template\\
+	%bilde av ingame\\
+	1.2: The user can now play the game by moving the players or using actions\\
+	\\
+	\\
+	1.2.1: Drog \& drop the player from one node to another to move the player\\
+	1.2.2: Button - Next player, the next players turn\\
+	1.2.3: Button - Use information card, the information card effect will affect the game state\\
+	1.2.4: Button - Move people, moves people from this zone to the next zone pressed\\
+	1.2.5: Button - Decrease panic, will decrease the panic in this zone\\
+	1.2.6: Button - Add information center, will add an information center in this node\\
+	1.2.7: Button - Add road block, will add a road block in this node\\
+	1.2.8: Button - Remove road block, will remove the road block in this node\\
+\\
+2:	Button - Expert interface\\
+\\
+	The expert interface is used to set up the game before it is played\\
+\\
+	2.1 Create new effect: Type in the wanted name, panic increase or decrease, domain, zone type to take effect and type of effect\\
+\\
+	2.1.1 Button - Add Effect(Card): Adds the new effect so it can be used in information cards\\
+\\
+	2.1.2 Button - Add Effect(Event): Adds the new effect so it can be used in events\\
+\\
+	2.2 Create/edit a event: Type in the wanted name, for the wanted effect and type a description\\
+\\
+	2.2.1 Button - Create Event: Adds the new event to this games events so this event can occur\\
+\\	
+	2.2.2 Button - Edit Event: Edits this event to the given parameters\\
+\\	
+	2.2.3 Button - Delete Event: Deletes this event from this games events\\
+\\	
+	2.2.4 Button - Remove Effect: Removes the selected effect, so that this effect can no longer be used in creating or editing events\\
+\\	
+	2.2.5 Button - Move To Edit: Sends this event to the input so it can be edited\\
+\\	
+\\	
+	2.3 Create/edit a information card: Type in the wanted name, for the wanted effect and type a description\\
+\\	
+	2.3.1 Button - Create ICard - Adds this information card to this games information cards so it can be used in the game	\\
+\\
+	2.3.2 Button - Edit ICard - Edits this information card to the given parameters\\
+\\
+	2.3.3 Button - Delete ICard - Deletes this information card from this games information cards\\
+\\
+	2.3.4 Button - Remove Effect - Removes the selected effect, so that this effect can no longer be used in creating or editing information cards\\	
+\\
+	2.3.5 Button - Move to edit: Sends this information card to the input so it can be edited\\
+\\	
+\\
+	2.4 Create a new player: Chose the wanted role and startnode of this player\\
+\\
+	2.4.1 Button - Add Player: Adds this player to the game with the selected role and startnode\\
+\\
+	2.4.2 Button - Change selected Player: Changes the selected player with the selected role and startnode\\
+\\
+	2.4.3 Button - Delete Player: Deletes this player from the game\\	
+\\	
+\\
+	2.5 Zone changing: Edits the info of the selected zone. Chose type of zone, people and panic. You can select the wanted zone to be edited in the bottom of the expert interface view where you create the map\\
+\\	
+	2.5.1 Button - Change: Changes this zone to the given parameters\\
+\\	
+\\
+	2.6	Misc info about the template: Type in author, map description, turns before events and timer before panic increase\\
+\\
+\\			
+	2.7 Creating the map: In the bottom of the expert interface view there is a grey square for creating the map\\
+\\	
+	2.7.1 Mouseclick - Left click in this square to create a new node, the selected node will be red to indicate this\\
+\\	
+	2.7.2 Drag \& drop - Press a node and drag it where you want it\\ 	
+\\	
+	2.7.3 Button - Delete node(D): Deletes the selected node from the map, D is the shortcut for this action on the keyboard\\
+\\
+	2.7.4 Button - Start node connection(C): Starts a node connection from the selected node to the next pressed node, a black line will mark this\\
+\\
+	2.7.5 Button - Add zone node(A): Adds the selected node to a zone (all nodes connected must be added to a zone before a zone can be created), the node will turn blue to indicate this\\
+\\	
+	2.7.6 Button - Clear zone nodes: Clears all the nodes that are a zone node, the blue zones will turn white\\
+\\
+	2.7.8 Button - Create zone(Z): Creates a zone if the nodes are all connected and the nodes are zone nodes\\	
+\\
+	2.7.9 Button - Delete zone(D): Deletes the selected zone\\
+\\
+3: 	Button - Game Master\\
+	%bilde av gamemaster\\
+	3.1: A list of games in progress is displayed. Chose one of them to enter that game\\
+	%bilde av ingame\\
+	3.2: The game master can now watch the game as well as interact with the game as a player can\\
+\\
+	4: 	Button - Watch replay\\
+	%bilde av replaylist\\
+	4.1: A list of games that already has been played, is displayed. Chose one of them, then the program will enter the given replay\\
+	%bilde av replay, ta bilde\\
+	4.2: The chosen replay will be displayed\\
+	\\
+	4.2.1 Button - Previous action: will display the previous game state\\
+	4.2.2 Button - Next action: will display the next game state\\
+\\
 %%%%%%%%%%%%%%%%%%%%%
 % C
 
@@ -565,3 +620,148 @@ This is a high level description of how to use the program. When the program sta
 \caption{Meeting with supervisor; 17}
 \label{fig:s_meeting_17}
 \end{table}}
+
+\section*{Status reports}
+
+Here is the status reports that were sent to the supervisor. Some status reports were given orally during the meetings with the supervisor. 
+
+Status report week 18\\
+\\
+1. Introduction\\
+Starting to feel the pressure for the deadline and exams\\
+\\
+2. Progress\\
+Replay is now finished as well as the game master interface, expert interface is very close to finish. We have done system usability test with the customer. And the research of sifteo cubes is done. Cleaning up the code and writing on the report has also been worked on.\\
+\\
+3. Open / closed problems\\
+No problems this week\\
+\\
+4. Planned work for next period\\
+Report, bug fixing, code commenting, code completion.\\
+\\
+5. Updated risks analysis\\
+No risks updated\\
+\\
+Status report week 17\\
+
+1. Introduction\\
+Forgot to send you on friday, so will send you now instead.\\
+\\
+2. Progress\\
+We have finished templates from database, started on the replay function and sifteo cubes. We also improved the expert interface.\\
+\\
+3. Open / closed problems\\
+Problem with sifteo cubes communicating with the pc.\\
+\\
+4. Planned work for next period\\
+Finish replay and expert interface (could take some time). Acceptance test with customer. Start on game master interface for intervening with a game in progress.\\
+\\
+5. Updated risks analysis\\
+No risks updated\\
+
+Status report week 16\\
+\\
+1. Introduction\\
+Had a meeting with the customer, been working on the report.\\
+\\
+2. Progress\\
+We can now get game templates from the database and use them in the game. However a bit buggy yet. The expert interface has been improved, but not yet finished. Been writing on the report for delivery this week. \\
+\\
+3. Open / closed problems\\
+Had some problems with exporting our report from google drive to LaTeX. Only one member of the group has experience with LaTeX, and he has been very busy this week. \\
+\\
+4. Planned work for next period\\
+Finish templates from database, finish expert interface (not sure how long this will take), start on replay function, start on sifteo cubes (tangible interface for the game). \\
+\\
+5. Updated risks analysis\\
+No risks updated\\
+\\
+\\
+Status report week 14\\
+\\
+1. Introduction\\
+This week has been very short because of the easter holidays. \\
+\\
+2. Progress\\
+We have optimized new graphics to the game. It is now pictures of the different city areas instead of colors on the zones. In addition the database is taking longer than expected and is constantly being worked on. Roles have been partially implemented, but still some work left. Research of sifteo cubes is done, but not discussed further with the customer. \\
+\\
+We did not have time this week for starting on the replay function.\\
+\\
+3. Open / closed problems\\
+No problems other than tasks taking longer time than expected. \\
+\\
+4. Planned work for next period\\
+Finish roles, make events after each player action, make the information cards more complete, hopefully start on replay and expert interface if we have enough time.\\
+\\
+5. Updated risks analysis\\
+No risks updated\\
+\\
+\\
+Status report week 11\\
+1. Introduction\\
+This week we have focused on the mid term project report\\
+\\
+2. Progress\\
+Information center and road block functionality for proper placing is now added. The mid term project report is now done. \\
+\\
+3. Open / closed problems\\
+We had no time for adding roles this week. Will add roles next week instead. \\
+\\
+4. Planned work for next period\\
+Finishing database queries, research of sifteo cubes, add roles, start on the replay\\
+\\
+5. Updated risks analysis\\
+No risks updated\\
+
+Status report week 10\\
+1. Introduction\\
+We now have a working prototype!\\
+\\
+2. Progress summary\\
+Players can now move and de-panic zones, and turns are implemented. A timer for increased panic is implemented. Drawing functinality for objects are in place. The database connection is now up and running. Css implemented for nice looks. Message passing between client and server (with json).
+\\
+3. Open closed problems\\
+Database connection was a huge problem, turned out that IDI had a firewall turned on. Much time wasted due to error detection in our code (which was pretty much correct all the time).\\
+\\
+4. Planned work for next period\\
+Database queries, event and information cards, roles, figure out how to implement effects (could be tricky). Documentation as always. Finishing the requirements for the midterm report.\\
+\\
+5. Updated risks analysis\\
+No updates needed\\
+\\
+
+Status report week 9\\
+1. Introduction\\
+Hey, here comes our status report.\\
+
+2. Progress summary\\
+We are now done with the architecture of the system. We've also started on a client/server framework and they can now communicate with each other. In addition we've just started on the game rules on the server. \\
+\\
+3. Open closed problems\\ 
+A problem we had was that there was many solutions to the different problems like communicating between server and client. We used some time to discuss and choose these solutions. \\
+
+4. Planned work for next period\\ 
+Next period we want to continue working on the server side with the game rules.\\
+
+5. Updated risks analysis\\
+No updates needed
+
+%%%%%%%%%%%%%%%%%%%%%%
+% C
+
+\chapter{Description of the Sifteo Cubes}
+
+\textbf{Taken from the Sifteo FAQ}
+
+
+\section{How do Sifteo Cubes work?}
+Sifteo Cubes is a hands-on interactive game system. They communicate wirelessly to respond to each other and being tilted, shaken, flipped, and pressed. The Sifteo Base stores your games and plays audio. You can play with 3-12 Sifteo cubes at once!\\
+Sifteo Cubes use 1 AAA battery each. Sifteo Bases use 2 AAA batteries. Rechargeable nickel metal hydride (NiMH) batteries, standard alkaline, or lithium (non-rechargeable) batteries will each work. Batteries last for approximately 8 hours of gameplay.
+
+\section{Who are Sifteo Cubes for?}
+Sifteo Cubes are perfect for kids and kids at heart who geek out on brainy challenging games and cool new gadgets (recommended for ages 7 to adult). Our games can be played individually and with friends and family. Sifteo Cubes are sturdy and can withstand some abuse. Still, they are sophisticated electronic devices, and very rough handling (throwing, dunking in water, and other forms of cube torture) can break a cube permanently.
+
+\section{How do I play games on my cubes?}
+Sifteo Cubes come pre-installed with 4 games that work right out of the box. You can buy more games using the Sifteo desktop software (download here) and install them by connecting the Sifteo Base to your computer with the USB cable that comes with it. Sifteo games are 80-120 credits (about $8-$12) each. You can buy credits through the desktop software.
+View full tech specs and system requirements here .
+

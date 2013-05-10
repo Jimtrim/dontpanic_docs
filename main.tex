@@ -6,11 +6,15 @@
 \usepackage{float}
 \usepackage{longtable}
 \usepackage[bottom]{footmisc}
+\usepackage{cite}
+\usepackage{url}
 
+% \usepackage{biblatex}
 
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{array}
+
 % Define your own types for special columns:
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \makeatletter
@@ -31,9 +35,11 @@
 
 
 
-% \usepackage{hyperref}
+%\usepackage{hyperref}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
 
 \begin{document}
 
@@ -45,14 +51,22 @@
 \input{pages/project_management} \pagebreak
 \input{pages/prestudy} \pagebreak
 \input{pages/requirements} \pagebreak
-\input{pages/design.tex} \pagebreak
+\input{pages/design} \pagebreak
 \input{pages/testing} \pagebreak
 \input{pages/final_product} \pagebreak
 \input{pages/project_evaluation} \pagebreak
 \input{pages/sifteo} \pagebreak 
-\input{pages/appendix} \pagebreak
+
 
 \listoffigures
 \listoftables
+
+\bibliographystyle{plain}
+\nocite{book:JavascriptGoodParts}
+\nocite{book:ProHTML5Games}
+\bibliography{bib}{}
+
+\input{pages/appendix} \pagebreak
+
 
 \end{document}
