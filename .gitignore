@@ -9,4 +9,7 @@
 .DS_Store
 *.blg
 *.bbl
+<<<<<<< HEAD
 *.pdf
+=======
+>>>>>>> f51df2d151fd57ff2d65c175ff7cd11720f12eb7
