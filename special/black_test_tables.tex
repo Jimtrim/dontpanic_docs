@@ -43,9 +43,9 @@
 		& Success \\ \hline
 	Test comments
 		& In order to connect to the database we have used, it is required to be connected to 
-			Eduroam, or to use NTNU's VPN service\\ \hline
+			NTNU's network, or to use NTNU's VPN service\\ \hline
 	Improvements needed
-		& None \\ \hline
+		& None that are obvious \\ \hline
 \end{tabular}
 
 
@@ -148,7 +148,7 @@
 	Test comments
 		& Everything looks as intended, without diviations. \\ \hline
 	Improvements needed
-		& We are not designers, so it could probably be more visually appealing \\ \hline
+		& The system is not made by designers, so it could probably be more visually appealing \\ \hline
 \end{tabular}
 
 
@@ -201,11 +201,11 @@
 	Alternative case
 		& \emph{None}\\ \hline
 	Test results 
-		& \\ \hline
+		& Success \\ \hline
 	Test comments
-		& \\ \hline
+		& This test was done by using two players with the roles of setting up information centers and roadblocks. Everything worked as intended \\ \hline
 	Improvements needed
-		& \\ \hline
+		& Making a tutorial, so it is more intuitive how one puts down centers and road blocks \\ \hline
 \end{tabular}
 
 
@@ -256,11 +256,11 @@
 		& The player tries to use more actions than there are in a game turn. \\
 		& The player tries to move the previous player model. \\ \hline
 	Test results 
-		& \\ \hline
+		& Success \\ \hline
 	Test comments
-		& \\ \hline
+		& This test was completed by playing a full game, and everything flows nicely\\ \hline
 	Improvements needed
-		& \\ \hline
+		& None that are obvious \\ \hline
 \end{tabular}
 
 
@@ -363,11 +363,14 @@
 	Alternative case
 		& \emph{None}\\ \hline
 	Test results 
-		& \\ \hline
+		& None \\ \hline
 	Test comments
-		& \\ \hline
+		& With the current implementation, this is not a possible case. The client can only have one game open
+			at a time. The server is only able to work localy, and will never get the amount of request 
+			needed to get memory overload. The fact that the server only works locally was not a problem
+			for the customer. \\ \hline
 	Improvements needed
-		& \\ \hline
+		& None, for the customer, but it is recommended to make the server work online. \\ \hline
 \end{tabular}
 
 
@@ -415,11 +418,11 @@
 	Alternative case
 		& \emph{None}\\ \hline
 	Test results 
-		& \\ \hline
+		& None \\ \hline
 	Test comments
-		& \\ \hline
+		& See previous test comments \\ \hline
 	Improvements needed
-		& \\ \hline
+		& None, for the customer, but it is recommended to make the server work online. \\ \hline
 \end{tabular}
 
 
@@ -466,11 +469,12 @@
 	Alternative case
 		& \emph{None}\\ \hline
 	Test results 
-		& \\ \hline
+		& Success \\ \hline
 	Test comments
-		& \\ \hline
+		& We have tested the client with Mac OSX, Windows and two flavours of Linux, and not seen any problems. 
+			The only part that requires anything is the server, which requires Node.js installed. \\ \hline
 	Improvements needed
-		& \\ \hline
+		& None that are apparent\\ \hline
 \end{tabular}
 
 \caption{Black Box Test: Game Start}
