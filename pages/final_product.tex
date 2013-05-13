@@ -10,13 +10,14 @@ This feature is largely finished. It includes the ability to design a city map, 
 \subsection{FR2 - Game Manager}
 An expert has the ability to monitor games in progress, shut them down and control the game pieces in real time, without having to wait for the active player's turn.\\
 
-\subsection{FR5 - Game Functionality}
-This is first and foremost all the functionality of the original board game, as specified in the appendix, and is the most comprehensive requirement. All of these core functions are completed, and work as intended.\\
-
 \subsection{FR4 - Replay}
 Experts have the ability to review a game that has been played, to evaluate player performance and desicionmaking. All played games are automatically saved as they are played, and will be recorded whether the game finished or not, and whether the client disconnected by accident or ended the game.\\
 
+\subsection{FR5 - Game Functionality}
+This is first and foremost all the functionality of the original board game, as specified in the appendix, and is the most comprehensive requirement. All of these core functions are completed, and work as intended.\\
+
 \section{Incomplete features}
+
 
 \subsection{FR2 - Game Manager}
 The ability to create effects and cards dynamically and send them to be executed in real-time has not been implemented. The Game manager can not close all games at once with one command, but has to enter each room and press the "End Game" button. The GM can not take notes in the game, and has to do this manually outsite the game.\\
@@ -57,5 +58,10 @@ Further iteration on the "effect" function can increase the number of possible e
 Although most mobile devices are too small to fit the whole game, they could be used to hold player information, information cards and other relevant data for the player. They could also be used as log-in devices, and contain the player's profile.
 
 \subsection{Tutorial} 
-During our usability testing, we realized that it took quite some time for outsiders to understand the rules and concept of the game. It could therefore be advisable to make a small map with some inscrutions coming during the timeline of the game. This is also something that should be concidered for the Expert Interface. 
+During our usability testing, we realized that it took quite some time for outsiders to understand the rules and concept of the game. It could therefore be advisable to make a small map with some instructions coming during the timeline of the game. This is also something that should be concidered for the Expert Interface. 
 
+\subsection{Database}
+The database is now freely hosted by IDI. IDI has a firewall that shuts down connections to the database if the request comes outside the NTNU network. IDI said they could open up for certain IP adresses, but if the game should be deployed on the web so that everyone can access it, the database should be hosted another place. The database tables can easily be created in a new database by calling db.set_up_database function in database.js.
+
+\subsection{Replay}
+When pressing the "Replay" button in the index page, a list of replays occur. However only a replay id and default replay will be displayed to describe the replay. The default replay field could be switched with the players that actually played the game when users are implemented.
