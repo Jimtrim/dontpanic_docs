@@ -363,11 +363,14 @@
 	Alternative case
 		& \emph{None}\\ \hline
 	Test results 
-		& \\ \hline
+		& None \\ \hline
 	Test comments
-		& \\ \hline
+		& With the current implementation, this is not a possible case. The client can only have one game open
+			at a time. The server is only able to work localy, and will never get the amount of request 
+			needed to get memory overload. The fact that the server only works locally was not a problem
+			for the customer. \\ \hline
 	Improvements needed
-		& \\ \hline
+		& None, for the customer, but it is recommended to make the server work online. \\ \hline
 \end{tabular}
 
 
@@ -415,11 +418,11 @@
 	Alternative case
 		& \emph{None}\\ \hline
 	Test results 
-		& \\ \hline
+		& None \\ \hline
 	Test comments
-		& \\ \hline
+		& See previous test comments \\ \hline
 	Improvements needed
-		& \\ \hline
+		& None, for the customer, but it is recommended to make the server work online. \\ \hline
 \end{tabular}
 
 
@@ -466,11 +469,12 @@
 	Alternative case
 		& \emph{None}\\ \hline
 	Test results 
-		& \\ \hline
+		& Success \\ \hline
 	Test comments
-		& \\ \hline
+		& We have tested the client with Mac OSX, Windows and two flavours of Linux, and not seen any problems. 
+			The only part that requires anything is the server, which requires Node.js installed. \\ \hline
 	Improvements needed
-		& \\ \hline
+		& None that are apparent\\ \hline
 \end{tabular}
 
 \caption{Black Box Test: Game Start}
