@@ -11,3 +11,9 @@
 *.bbl
 *.pdf
 
+
+main.synctex.gz(busy)
+
+main.synctex.gz
+
+main.pdf
