@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{website:Codecademy}
+Codeacademy.
+\newblock Codeacademy, learn to code.
+\newblock \url{http://www.codecademy.com/}, March 2013.
+
 \bibitem{book:JavascriptGoodParts}
 Douglas Crockford.
 \newblock {\em JavaScript, the Good Parts}.
