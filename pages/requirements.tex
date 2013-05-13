@@ -40,6 +40,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{table}[H]
 \begin{tabular}{|l|p{14cm}|} \hline
 	\textbf{ID} & \textbf{01}\\ \hline
+	Corresponding FR & FR3\\hline
 	Name & Login Player\\ \hline
 	Goal & To be connected to the server\\ \hline
 	Actors & Player, server\\ \hline
@@ -72,6 +73,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{table}[H]
 \begin{tabular}{|l|p{14cm}|} \hline
 	\textbf{ID} & \textbf{02}\\ \hline
+	Corresponding FR & FR1\\hline
 	Name & Login Expert\\ \hline
 	Goal & To be connected to the server\\ \hline
 	Actors & Expert, server\\ \hline
@@ -86,7 +88,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 			& - The expert is moved to the expert's page. \\ \hline
 	Alternative Case & Wrong password\\ \hline
 	Previous Use Case & None\\ \hline
-	Spawned Use Case & 03\\ \hline
+	Spawned Use Case & 03, 09\\ \hline
 \end{tabular}
 \caption{Use Case: Login expert}
 \label{fig:usecase02table}
@@ -104,6 +106,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{table}[H]
 \begin{tabular}{|l|p{14cm}|} \hline
 	\textbf{ID} & \textbf{03}\\ \hline
+	Corresponding FR & FR1\\hline
 	Name & Game Setup\\ \hline
 	Goal & To create a successful game session\\ \hline
 	Actors & Expert, server\\ \hline
@@ -142,6 +145,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{tabular}{|l|p{14cm}|}
 \hline
 	\textbf{ID} & \textbf{04}\\ \hline
+	Corresponding FR & FR2\\hline
 	Name & Watcher\\ \hline
 	Goal & To get a non player version of the game\\ \hline
 	Actors & Expert, server\\ \hline
@@ -170,6 +174,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{tabular}{|l|p{14cm}|}
 \hline
 	\textbf{ID} & \textbf{05}\\ \hline
+	Corresponding FR & none\\hline
 	Name & Join Game\\ \hline
 	Goal & To successfully join a starting game\\ \hline
 	Actors & User, game session, server \\ \hline
@@ -180,7 +185,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 			& - The user joins the game \\ \hline
 	Alternative Case & The user gives incorrect info and is not added to the game \\ \hline
 	Previous Use Case & 03 \\ \hline
-	Spawned Use Case & 06, 07\\ \hline
+	Spawned Use Case & 06, 07, 09\\ \hline
 \end{tabular}
 \caption{Use Case: Join Game}
 \label{fig:usecase05table}
@@ -199,6 +204,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{tabular}{|l|p{14cm}|}
 \hline
 	\textbf{ID} & \textbf{06}\\ \hline
+	Corresponding FR & none\\hline
 	Name & Move game pieces \\ \hline
 	Goal & To move a game piece to a wanted location \\ \hline
 	Actors & Player, game board, game session, server \\ \hline
@@ -230,6 +236,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{tabular}{|l|p{14cm}|}
 \hline
 	\textbf{ID} & \textbf{07}\\ \hline
+	Corresponding FR & none\\hline
 	Name & Use information cards\\ \hline
 	Goal & To use an information card to affect the board\\ \hline
 	Actors & Player, Game Board, Game Session, Server\\ \hline
@@ -264,6 +271,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{tabular}{|l|p{14cm}|}
 \hline
 	\textbf{ID} & \textbf{08}\\ \hline
+	Corresponding FR & none\\hline
 	Name & Use player action \\ \hline
 	Goal & The player uses an action and the game board is updated\\ \hline
 	Actors & Player, Game Board, Game Session, Server \\ \hline
@@ -283,6 +291,38 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \caption{Use Case: Login expert}
 \label{fig:usecase08table}
 \end{table}
+
+
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/replay.jpg}
+  \caption{Use cases, 'Replay'} 
+  \label{fig:replay}
+\end{figure}
+
+
+\begin{table}[H]
+\begin{tabular}{|l|p{14cm}|}
+\hline
+	\textbf{ID} & \textbf{09}\\ \hline
+	Corresponding FR & FR2\\hline
+	Name & Watcher\\ \hline
+	Goal & To watch a replay of a game session\\ \hline
+	Actors & Expert, server\\ \hline
+	Start requirements & The expert is logged in, a game session has been stored in the database. \\ \hline
+	End requirements & The expert is able to click through the wanted game\\ \hline
+	Case & - From the Replay option at the start of the page one can see all stored game sessions. The expert selects one game session, the replay is opened in the same window and is now ready. Using the buttons in the top right corner, the expert clicks forward or back in the replay.\\
+	Alternative Case & None \\ \hline
+	Previous Use Case & 02, 05\\ \hline
+	Spawned Use Case & None\\ \hline
+\end{tabular}
+\caption{Use Case: Replay}
+\label{fig:usecase09table}
+\end{table}
+
+
+
 % END USE-CASE TABLES
 
 
