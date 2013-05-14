@@ -10,7 +10,7 @@ In this period, most of the time was spent on research, learning, and gathering 
 \newline
 Week 8 - 9\\
 \newline
-The first version of the user interface, and a barebones server was implemented in the next few weeks. Algorithms for constructing nodes, zones and paths, as well as proper listening functions for moving and selecting objects were developed.\\
+The first version of the user interface, and a barebones server was implemented. Algorithms for constructing nodes, zones and paths, as well as proper listening functions for selecting objects were developed.\\
 
 \begin{figure}[H]
   \centering
@@ -27,13 +27,15 @@ The first version of the user interface, and a barebones server was implemented 
   \label{fig:canvas}
 \end{figure}
 
-
 \section{Iteration 2}
+
+
 
 Week 10 - 14\\
 \newline
-In iteration 2, the server was in focus, and was populated with most of the core game functionality (FR5) such as moving players, decreasing panic, info cards and events, and timer. Sidebars for player information was added, as well as a status bar showing relevant information with buttons to execute actions on selected items.\\
-
+Early in iteration 2, the server was in focus, and was populated with most of the core game functionality (FR5) such as moving players, decreasing panic, info cards, events, and timer. Sidebars for player information was added, as well as a status bar showing relevant information with buttons to execute actions on selected items. In addition a simple database connection, and CSS was implemented.\\
+\\
+Later on in this iteration functionality for adding and removing roadblocks and information centers were added. 
 % FIG better interface
 \begin{figure}[H]
   \centering
@@ -41,13 +43,23 @@ In iteration 2, the server was in focus, and was populated with most of the core
   \caption{User interface, ' User interface with players, cards and status bar'} 
   \label{fig:earlyversion}
 \end{figure}
+At the end of this iteration new graphics were added, the zones was now images depending on what type of zone it was instead of just colors.
+
+%New graphics interface
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/newgraphics.jpg}
+  \caption{User interface, 'Canvas with images instead of colors'} 
+  \label{fig:newgraphics}
+\end{figure}
 
 \section{Iteration 3}
 
 Week 15 - 18\\
 \newline
 The third iteration was focused on the functionality outside the game. The expert interface was created, which creates game templates and maps that can be loaded into the game. The website got an index page, and general website functionality so users can navigate between the pages easily.\\
-
+\\
+In the end of this iteration the game templates that the expert interface made was successfully stored in the database and could be retrieved by the server. Therefore users could now create game templates and play different game templates instead of just the standard template that had been used until now.\\
 \begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{img/gamefinal.png}

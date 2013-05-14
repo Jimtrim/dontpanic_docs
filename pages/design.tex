@@ -90,7 +90,8 @@ to work with the server. Therefore using a different architecture was never cons
 \end{figure}
 
 
-\subsection{ER diagram}
+\subsection{Initial ER diagram}
+This is the suggested ER diagram that was made early in the designing phase.
 \begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{img/erdiagram.jpeg}
@@ -98,17 +99,18 @@ to work with the server. Therefore using a different architecture was never cons
   \label{fig:erdiagram}
 \end{figure}
 
-\subsection{Final ER diagram}
+\subsection{Final database model}
+With the use of JSON all the game variables were stored in one string instead of storing it in the different database tables. Therefore the final database model is a lot less than the initial ER diagram, but actually contains the same amount of variables as in the initial ER diagram.	
 \begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{img/finaldatabase.jpeg}
-  \caption{'Final ER diagram'} 
+  \caption{'Final database model'} 
   \label{fig:final_erdiagram}
 \end{figure}
 
 \subsection{Object hierarchy}
 This chart is intended to show a high level view of the hierarchy, and how the objects are connected together to avoid loops. 
-
+??
 \subsection{Sequence diagrams}
 
 The sequence diagrams show the interactions between the files, functions and methods. It depicts the objects and files interactions in the right time sequence. The diagrams also show the calls each method or a file sends to the next file, function or method.  \\
