@@ -12,10 +12,10 @@ FR3 - Player Profiles\\
 Each player should have a profile that records the players performance in played games. This includes tracking wins and losses, listing game replays and other metrics that are relevant.\\
 \\
 FR4 - Replay\\
-An expert should be able to view finished games as a re-play, to evaluate player performance. These replays should be stored in , to be viewed at any time.\\
+An expert should be able to view finished games as a re-play, to evaluate player performance. These replays should be stored in the database, to be viewed at any time.\\
 \\
 FR5 - Game functionality\\
-In addition to adapting the functionality of the board game version to an electronic platform, as specified in the appendix, the number of people in a zone should affect how panic spreads between zones, and inside them. \\
+In addition to adapting the functionality of the board game version to an electronic platform, as specified in appendix ~\ref{appendix:B}, the number of people in a zone should affect how panic spreads between zones, and inside them. \\
 \\
 FR6 - Physical interaction\\
 Preferably, the game should be able to respond to commands sent by interaction devices such as Arduino or Sifteo cubes. They could be used to represent zones, players or be used as controllers for movement.\\
@@ -40,6 +40,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{table}[H]
 \begin{tabular}{|l|p{14cm}|} \hline
 	\textbf{ID} & \textbf{01}\\ \hline
+	Corresponding FR & FR3\\ \hline
 	Name & Login Player\\ \hline
 	Goal & To be connected to the server\\ \hline
 	Actors & Player, server\\ \hline
@@ -72,13 +73,14 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{table}[H]
 \begin{tabular}{|l|p{14cm}|} \hline
 	\textbf{ID} & \textbf{02}\\ \hline
+	Corresponding FR & FR1\\ \hline
 	Name & Login Expert\\ \hline
 	Goal & To be connected to the server\\ \hline
 	Actors & Expert, server\\ \hline
 	Start requirements & None\\ \hline
 	End requirements & - The expert gets logged in.\\
 					 & - The expert view is displayed.\\ \hline
-	Case & - The expert clicks on the option for expert, in the middle of the HTML starpage\\
+	Case & - The expert clicks on the option for expert in the middle of the HTML startpage\\
 			& - The expert gets prompted with the login form. \\
 		 	& - The expert gives login-info.\\
 			& - The expert clicks the login button to the rigth of the form.\\
@@ -86,7 +88,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 			& - The expert is moved to the expert's page. \\ \hline
 	Alternative Case & Wrong password\\ \hline
 	Previous Use Case & None\\ \hline
-	Spawned Use Case & 03\\ \hline
+	Spawned Use Case & 03, 09\\ \hline
 \end{tabular}
 \caption{Use Case: Login expert}
 \label{fig:usecase02table}
@@ -104,6 +106,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{table}[H]
 \begin{tabular}{|l|p{14cm}|} \hline
 	\textbf{ID} & \textbf{03}\\ \hline
+	Corresponding FR & FR1\\ \hline
 	Name & Game Setup\\ \hline
 	Goal & To create a successful game session\\ \hline
 	Actors & Expert, server\\ \hline
@@ -142,6 +145,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{tabular}{|l|p{14cm}|}
 \hline
 	\textbf{ID} & \textbf{04}\\ \hline
+	Corresponding FR & FR2\\ \hline
 	Name & Watcher\\ \hline
 	Goal & To get a non player version of the game\\ \hline
 	Actors & Expert, server\\ \hline
@@ -170,6 +174,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{tabular}{|l|p{14cm}|}
 \hline
 	\textbf{ID} & \textbf{05}\\ \hline
+	Corresponding FR & none\\ \hline
 	Name & Join Game\\ \hline
 	Goal & To successfully join a starting game\\ \hline
 	Actors & User, game session, server \\ \hline
@@ -180,7 +185,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 			& - The user joins the game \\ \hline
 	Alternative Case & The user gives incorrect info and is not added to the game \\ \hline
 	Previous Use Case & 03 \\ \hline
-	Spawned Use Case & 06, 07\\ \hline
+	Spawned Use Case & 06, 07, 09\\ \hline
 \end{tabular}
 \caption{Use Case: Join Game}
 \label{fig:usecase05table}
@@ -199,6 +204,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{tabular}{|l|p{14cm}|}
 \hline
 	\textbf{ID} & \textbf{06}\\ \hline
+	Corresponding FR & none\\ \hline
 	Name & Move game pieces \\ \hline
 	Goal & To move a game piece to a wanted location \\ \hline
 	Actors & Player, game board, game session, server \\ \hline
@@ -230,6 +236,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{tabular}{|l|p{14cm}|}
 \hline
 	\textbf{ID} & \textbf{07}\\ \hline
+	Corresponding FR & none\\ \hline
 	Name & Use information cards\\ \hline
 	Goal & To use an information card to affect the board\\ \hline
 	Actors & Player, Game Board, Game Session, Server\\ \hline
@@ -264,6 +271,7 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \begin{tabular}{|l|p{14cm}|}
 \hline
 	\textbf{ID} & \textbf{08}\\ \hline
+	Corresponding FR & none\\ \hline
 	Name & Use player action \\ \hline
 	Goal & The player uses an action and the game board is updated\\ \hline
 	Actors & Player, Game Board, Game Session, Server \\ \hline
@@ -283,6 +291,38 @@ A detailed set of use case diagrams and textual use cases are provided below.\\
 \caption{Use Case: Login expert}
 \label{fig:usecase08table}
 \end{table}
+
+
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/replay.jpg}
+  \caption{Use cases, 'Replay'} 
+  \label{fig:replay}
+\end{figure}
+
+
+\begin{table}[H]
+\begin{tabular}{|l|p{14cm}|}
+\hline
+	\textbf{ID} & \textbf{09}\\ \hline
+	Corresponding FR & FR2\\ \hline
+	Name & Watcher\\ \hline
+	Goal & To watch a replay of a game session\\ \hline
+	Actors & Expert, server\\ \hline
+	Start requirements & The expert is logged in, a game session has been stored in the database. \\ \hline
+	End requirements & The expert is able to click through the wanted game\\ \hline
+	Case & - From the Replay option at the start of the page one can see all stored game sessions. The expert selects one game session, the replay is opened in the same window and is now ready. Using the buttons in the top right corner, the expert clicks forward or back in the replay.\\
+	Alternative Case & None \\ \hline
+	Previous Use Case & 02, 05\\ \hline
+	Spawned Use Case & None\\ \hline
+\end{tabular}
+\caption{Use Case: Replay}
+\label{fig:usecase09table}
+\end{table}
+
+
+
 % END USE-CASE TABLES
 
 
@@ -295,7 +335,7 @@ All non functional requirements comply with the definitions as stated in the ISO
 \subsection{Quality in use}
 
 \emph{1: Efficiency}\\
-Like regular board games, actions should not be difficult to execute. The players are working against the clock (the panic increase timer). Hence, when designing the user interface, one of the aims should be to minimize the number of clicks required.
+Like regular board games, actions should not be difficult to execute. The players are working against the clock (the panic increase timer). Hence, when designing the user interface, one of the goals should be to minimize the number of clicks required.
 \\\newline
 \emph{2: Context Coverage}\\
 The system should be flexible enough to accommodate individual experts’ preferences and needs in their simulations. By relying on the settings given by the expert through the expert interface form, the best possible flexibility can be ensured.
