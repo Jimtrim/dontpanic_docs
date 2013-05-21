@@ -6,12 +6,13 @@
 \renewcommand{\thesection}{\arabic{section}}
 
 \chapter{Gannt Diagram}
+\label{appendix:A}
 
 \begin{figure}[H]
   \centering
     \includegraphics[height=20cm]{img/ganttv3v2.jpg}
   \caption{ 'Gannt diagram'} 
-  \label{fig:paperPrototype}
+  \label{fig:ganntDiagram}
 \end{figure}
 
 
@@ -22,6 +23,7 @@
 % B
 
 \chapter{Don't Panic board game rules}
+\label{appendix:B}
 %
 \emph{These are the rules of the physical board game, supplied by the customer.}
 %
@@ -118,6 +120,7 @@ The game ends immediately in defeat for all players if all the map has a panic l
 % C
 
 \chapter{Updated Don't Panic game rules}
+\label{appendix:C}
 %
 \emph{There were several changes in the rules of the board game to the electronic version. These changes have been acounted for in the updated rules.}
 %
@@ -186,115 +189,137 @@ The game ends immediately in defeat for all players if all Zones on the map reac
 % D
 
 \chapter{User manual}
+\label{appendix:D}
 %
-This is a high level description of how to use the program. When the program starts, the user will have four different choises:\\
-%bilde av indexpage\\
-1:	Button - Play\\
-	%bilde av gameslist\\
-	1.1: A list of active game templates is displayed. Chose one of them, then the program will start a new game with the given template\\
-	%bilde av ingame\\
-	1.2: The user can now play the game by moving the players or using actions\\
-	\\
-	\\
-	1.2.1: Drog \& drop the player from one node to another to move the player\\
-	1.2.2: Button - Next player, the next players turn\\
-	1.2.3: Button - Use information card, the information card effect will affect the game state\\
-	1.2.4: Button - Move people, moves people from this zone to the next zone pressed\\
-	1.2.5: Button - Decrease panic, will decrease the panic in this zone\\
-	1.2.6: Button - Add information center, will add an information center in this node\\
-	1.2.7: Button - Add road block, will add a road block in this node\\
-	1.2.8: Button - Remove road block, will remove the road block in this node\\
-\\
-2:	Button - Expert interface\\
-\\
-	The expert interface is used to set up the game before it is played\\
-\\
-	2.1 Create new effect: Type in the wanted name, panic increase or decrease, domain, zone type to take effect and type of effect\\
-\\
-	2.1.1 Button - Add Effect(Card): Adds the new effect so it can be used in information cards\\
-\\
-	2.1.2 Button - Add Effect(Event): Adds the new effect so it can be used in events\\
-\\
-	2.2 Create/edit a event: Type in the wanted name, for the wanted effect and type a description\\
-\\
-	2.2.1 Button - Create Event: Adds the new event to this games events so this event can occur\\
-\\	
-	2.2.2 Button - Edit Event: Edits this event to the given parameters\\
-\\	
-	2.2.3 Button - Delete Event: Deletes this event from this games events\\
-\\	
-	2.2.4 Button - Remove Effect: Removes the selected effect, so that this effect can no longer be used in creating or editing events\\
-\\	
-	2.2.5 Button - Move To Edit: Sends this event to the input so it can be edited\\
-\\	
-\\	
-	2.3 Create/edit a information card: Type in the wanted name, for the wanted effect and type a description\\
-\\	
-	2.3.1 Button - Create ICard - Adds this information card to this games information cards so it can be used in the game	\\
-\\
-	2.3.2 Button - Edit ICard - Edits this information card to the given parameters\\
-\\
-	2.3.3 Button - Delete ICard - Deletes this information card from this games information cards\\
-\\
-	2.3.4 Button - Remove Effect - Removes the selected effect, so that this effect can no longer be used in creating or editing information cards\\	
-\\
-	2.3.5 Button - Move to edit: Sends this information card to the input so it can be edited\\
-\\	
-\\
-	2.4 Create a new player: Chose the wanted role and startnode of this player\\
-\\
-	2.4.1 Button - Add Player: Adds this player to the game with the selected role and startnode\\
-\\
-	2.4.2 Button - Change selected Player: Changes the selected player with the selected role and startnode\\
-\\
-	2.4.3 Button - Delete Player: Deletes this player from the game\\	
-\\	
-\\
-	2.5 Zone changing: Edits the info of the selected zone. Chose type of zone, people and panic. You can select the wanted zone to be edited in the bottom of the expert interface view where you create the map\\
-\\	
-	2.5.1 Button - Change: Changes this zone to the given parameters\\
-\\	
-\\
-	2.6	Misc info about the template: Type in author, map description, turns before events and timer before panic increase\\
-\\
-\\			
-	2.7 Creating the map: In the bottom of the expert interface view there is a grey square for creating the map\\
-\\	
-	2.7.1 Mouseclick - Left click in this square to create a new node, the selected node will be red to indicate this\\
-\\	
-	2.7.2 Drag \& drop - Press a node and drag it where you want it\\ 	
-\\	
-	2.7.3 Button - Delete node(D): Deletes the selected node from the map, D is the shortcut for this action on the keyboard\\
-\\
-	2.7.4 Button - Start node connection(C): Starts a node connection from the selected node to the next pressed node, a black line will mark this\\
-\\
-	2.7.5 Button - Add zone node(A): Adds the selected node to a zone (all nodes connected must be added to a zone before a zone can be created), the node will turn blue to indicate this\\
-\\	
-	2.7.6 Button - Clear zone nodes: Clears all the nodes that are a zone node, the blue zones will turn white\\
-\\
-	2.7.8 Button - Create zone(Z): Creates a zone if the nodes are all connected and the nodes are zone nodes\\	
-\\
-	2.7.9 Button - Delete zone(D): Deletes the selected zone\\
-\\
-3: 	Button - Game Master\\
-	%bilde av gamemaster\\
-	3.1: A list of games in progress is displayed. Chose one of them to enter that game\\
-	%bilde av ingame\\
-	3.2: The game master can now watch the game as well as interact with the game as a player can\\
-\\
-	4: 	Button - Watch replay\\
-	%bilde av replaylist\\
-	4.1: A list of games that already has been played, is displayed. Chose one of them, then the program will enter the given replay\\
-	%bilde av replay, ta bilde\\
-	4.2: The chosen replay will be displayed\\
-	\\
-	4.2.1 Button - Previous action: will display the previous game state\\
-	4.2.2 Button - Next action: will display the next game state\\
-\\
+This is a high level description of how to play Don't Panic! The game is started by accessing the game server through a web browser (if you are running a local server, use 127.0.0.1:8008). When starting the program, the user is given four choices:
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/choices.png}
+  \caption{User Manual, 'The different choices for the user when starting the game'}
+  \label{fig:choices}
+\end{figure}
+
+\section{Play}
+
+When clicking the Play-button, a list of the available game-templates is shown:
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/gamelist.png}
+  \caption{User Manual, 'List of templates'}
+  \label{fig:gamelist}
+\end{figure}
+
+\noindent After choosing a template, the program will start a new game with the given template as the initial state of the game. The users will now be able to play the game by moving their game pieces and pressing buttons.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/buttonsbothred.png}
+  \caption{User Manual, 'The different buttons in the game'}
+  \label{fig:buttons}
+\end{figure}
+
+\noindent The available buttons depends on if a player has selected a zone or a node. As seen in the images above, the top screenshot shows the buttons available when selecting a node, while the bottom one shows the buttons available when selecting a zone. The buttons for adding and removing roadblocks, information center, moving people and decreasing panic are not available when neither a zone nor a node is selected.
+
+\begin{itemize}
+\item Buttons - 'English', 'Norwegian', 'Italian', chooses the language for the game (Italian has not been implemented).
+\item Button - 'End Game', ends the current game.
+\item Button - 'Next player', changes the turn.
+\item Button - 'Move people', moves people from this zone to the next zone pressed.
+\item Button - 'Decrease panic', decrease the panic in this zone.
+\item Button - 'Add information center', add an information center in this node.
+\item Button - 'Add road block', add a road block in this node.
+\item Button - 'Remove road block', remove the road block in this node.
+\item Button - 'Use information card', use one of your information cards.
+\end{itemize}
+
+\section{Expert interface}
+
+The Expert Interface is used to set up game templates. All the information for a game, such as map, cards and players are set up in this interface, and stored on the database to be used when starting a game session.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/ExpertInterfaceForms.png}
+  \caption{User Manual, 'The Expert Interface forms used to set up the game'}
+  \label{fig:expertinterface}
+\end{figure}
+
+\begin{itemize}
+\item Create new effect: Type in the wanted name for the effect, change in panic, what domain the effect is for, what type of zone the effect affects and what type of effect it is. Then add the effect as a card- or event effect using the buttons.
+\item Create/edit a event: Type in the wanted name for the event, add an effect, and write a description of the event. This description will be visible to the players in the game when the event happens. Use the buttons to create the new event, edit an event or remove the effect. The available events can be browsed by using 'Show Event'. To edit an event, it has to be selected in 'Show event', and then clicking 'Move To Edit'
+\item Create/edit a information card: Type in the wanted name for the card, the wanted effect and a description of the card. The description is visible to the players. The available information cards can be browsed by using 'Show Card'. To edit an information card, it has to be selected in 'Show card', and then clicking 'Move To Edit'
+\item Create a new player: Choose the wanted role and startnode of this player. Then click 'Add player'. Players can also be deleted by clicking 'Delete Player'.
+\item Zone changing: Edits the information of the selected zone. The zone is selected by clicking on it in the canvas. You can edit the type of zone and the amout of people and panic.
+\item Misc info about the template: Type in name of the author, a description of the map, the amount of turns before events should happen and the initial time before panic increases in the game.
+\end{itemize}
+
+\noindent In the bottom of the expert interface there is a canvas for drawing the map of the game.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/expertinterfacecanvasmanual.png}
+  \caption{User Manual, 'The Expert Interface canvas for creating a map'}
+  \label{fig:expertinterfacecanvas}
+\end{figure}
+
+\noindent Left click in the canvas to create a new node. A node is red to indicate that it is selected. A node can be moved by dragging it with the mouse.
+ 
+\begin{itemize}
+\item Button - Delete node(D): Deletes the selected node from the map, D is the shortcut for this action on the keyboard.
+\item Button - Start node connection(C): Starts a node connection from the selected node to the next, select another node to create a connection between them. A black line between the nodes represents the connection. A player can only move between nodes that are connected.
+\item Button - Add zone node(A): Readies a node to be added to a zone (when creating a zone, you must first add them using this function). A node will turn blue to indicate that it has been marked as a zone-node.
+\item Button - Create zone(Z): Select the nodes for the zone using Add zone node(A), then press this button. A zone will now have been created from the nodes selected.
+\item Button - Clear zone nodes(X): Clears all the selected nodes that are a zone node. The blue zones will turn white to indicate that they have been cleared.
+\item Button - Delete zone(D): Deletes the selected zone.
+\item Button - Turn off hotkeys: Turns of the hotkey functionality. This is useful when typing in the form.
+\end{itemize}
+
+\section{Game Master}
+
+A list of games in progress will be displayed when choosing Game Master from the main menu.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/gamemasterlist.png}
+  \caption{User Manual, 'The list of games being played'}
+  \label{fig:replaylist}
+\end{figure}
+
+\noindent Choose one of the available games to enter as a game master. The game master will now be able to watch the game being played in real-time, as well as interact with the game as he chooses, as if he was a player in the game. The game master can do actions regardless of whose turn it is.
+
+\section{Replay}
+
+The current replays are displayed when selecting 'Replay' from the main menu. A replay is a finished game that has been stored to the database. Chose one of them from the list, and the chosen replay will start.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/replays.png}
+  \caption{User Manual, 'The list of available replays'}
+  \label{fig:replaylist}
+\end{figure}
+
+The replay view is identical to the game view, but the user can only use two buttons:
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/replaybuttons.png}
+  \caption{User Manual, 'Buttons used in replay view'}
+  \label{fig:replaylist}
+\end{figure}
+
+\begin{itemize}
+\item Button - Previous action: will display the previous game state of the replay.
+\item Button - Next action: will display the next game state of the replay.
+\end{itemize}
+
+\noindent A message will appear to the user when there are no more actions to be viewed in the replay.
+
 %%%%%%%%%%%%%%%%%%%%%
 % E
 
 \chapter{Commentary for meetings with customer}
+\label{appendix:E}
 %
 \emph{These are the things discussed and planed at meetings with the customer over the course of the project}
 %
@@ -552,6 +577,7 @@ This is a high level description of how to use the program. When the program sta
 % F
 
 \chapter{Commentary for meeting with supervisor}
+\label{appendix:F}
 %
 \emph{These are the commentary for the meetings with our supervisor}
 %
@@ -822,6 +848,7 @@ No updates needed
 % G
 
 \chapter{Description of the Sifteo Cubes}
+\label{appendix:G}
 
 \textbf{Taken from the Sifteo FAQ}
 

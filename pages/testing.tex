@@ -53,8 +53,10 @@ The result from each test and the comments will be shown in the tables below. Ea
 	\item Improvements absolutely needed
 	\item Small tweaks wanted
 \end{itemize}
+\subsection{Tests}
 
 
+\input{special/black_test_tables}
 \subsection{System usability testing}
 The tester is provided with the SUS\footnote{http://www.measuringusability.com/sus.php} (System Usability Score) sheet. The SUS sheet is a questionnaire containing 10 statements. The tester is expected to respond to each statement by choosing one of five options, depending on the degree of agreeability.\\
 \\
@@ -95,10 +97,12 @@ These are the results from the system usability test with the customer:
 	\item I needed to learn a lot of things before I could get going with this system.\hfill 3
 \end{enumerate}
 Comments about the system: In the expert interface an error message should be shown instead of the program crashing.\\ 
+\\
 A SUS score of 57.5\\
 
-In addition, tests on three fellow students were done after the system was finished:
-
+In addition, tests on three fellow students were done after the system was finished\\
+\\
+Testperson number one:
 \begin{enumerate} \setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}
 	\item I think that I would like to use this system frequently. \hfill 4
 	\item I found the system unnecessarily complex. \hfill 1
@@ -113,8 +117,10 @@ In addition, tests on three fellow students were done after the system was finis
 \end{enumerate}
 
 Comments about the system: Hard to see the active player when there is lots of panic on the map. Difficult to read the text in the expert interface view.\\
+\\
 A SUS score of 67.5\\
-
+\\
+Testperson number two:
 \begin{enumerate} \setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}
 	\item I think that I would like to use this system frequently. \hfill 5 
 	\item I found the system unnecessarily complex. \hfill 2
@@ -129,7 +135,10 @@ A SUS score of 67.5\\
 \end{enumerate}
 
 Comments about the system: Need to learn the game itself more than the program.\\
+\\
 A SUS score of 70.\\
+\\
+Testperson number three:
 
 \begin{enumerate} \setlength{\itemsep}{0cm}\setlength{\parskip}{0cm}
 	\item I think that I would like to use this system frequently. \hfill 4
@@ -145,19 +154,17 @@ A SUS score of 70.\\
 \end{enumerate}
 
 Comments about the system: A bit problematic too see the active player when the map was mostly red.\\
+
 A SUS score of 70.\\
 
-Because the system was not completed when we tested it with the customer, that SUS score will not be computed in the average SUS score. Therefore the average SUS score for the system is 69.1666666667, that is considered as above the average which is 68. Some of the negative scores in these tests relates to the game itself and not the system. If people that knew the game would test the system, better scores would probably occur. Therefore more time should be spent explaining the game rules before the tests. In addition most users will only use the "Play" part of the system. The "Expert Interface", "Game Master" and "Replay" parts are for the experts only, to set up, control and review games. In the SUS test, all parts of the system was tested, and that will not be the case of a regular user.\\
+Because the system was not completed when tested with the customer, the SUS score will not be computed in the average SUS score. Therefore the average SUS score for the system is 69.1666666667, that is considered as above the average which is 68. Some of the negative scores in these tests relates to the game itself and not the system. If people that knew the game would test the system, better scores would probably occur. Therefore more time should be spent explaining the game rules before the tests. In addition most users will only use the "Play" part of the system. The "Expert Interface", "Game Master" and "Replay" parts are for the experts only, to set up, control and review games. In the SUS test, all parts of the system was tested, and that will not be the case of a regular user.\\
 \\
 Because it is a serious game for learning purposes, the people who are going to play the game will most likely get proper introduction to the game rules. Therefore the group are deeply satisfied with the usability of the system. 
 \subsection{White Box}
-For the white box testing we have done small tests locally without pushing it to git. We have tried to keep one branch on our git repository free from errors, and only pushing working and error free versions of the game. The white box testing process has been an continuously task throughout the game development. The line "console.log('error');" has of course been of great help. The testing we have done of white box  has not been documented, as we found nothing of importance to document when we decided to not use unit tests. Since this is a smaller project, members of the group has had widespread and deep knowledge of the complete source code, and therefore white box testing has been possible.
+For the white box testing, small tests were done locally without pushing it to git. The white box testing process has been an continuously task throughout the game development. The line "console.log('error');" has of course been of great help. The testing done of white box has not been documented, as nothing was found of importance to document when it was decided to not use unit tests. Since this is a smaller project, members of the group has had widespread and deep knowledge of the complete source code, and therefore white box testing has been possible.
 
 
-\subsection{Tests}
 
-
-\input{special/black_test_tables}
 
 \subsection{Usability tests}
 \input{special/usability_test_tables}
