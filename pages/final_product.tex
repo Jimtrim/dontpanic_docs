@@ -27,6 +27,31 @@ Due to time constraints and more pressing features, this requirement was not pri
 
 \subsection{FR6 - Physical Interaction}
 This requirement came up some time after the planning phase, and required a lot of expertise to be implemented. It was decided, in discussions with the customer, to instead estimate the time required to flesh out such a feature, and research possible integration approaches. This requirement has its own chapter in this report.\\
+\section{Non functional requirements} 
+
+\subsection{Quality in use}
+
+\emph{1: Efficiency}\\
+The game is fairly efficient to play. No unnecessary clicks is required to do the different actions, and it is almost as efficient as a regular board game would be. However having to pass the mouse around or tell the one in control of the mouse what to do is a bit clumsy. Implementing a tangible interface would fix this problem completely.\\
+
+\\\newline
+\noindent \emph{2: Context Coverage}\\
+The system is very flexible. In the expert interface, the expert can create new information cards, events, draw the map with zones including people, panic and type and nodes as well as create the players and set the interval for panic waves and event turns. This makes it possible for the expert to highly customize the different games according to the experts preferences.
+\subsection{Product quality}
+
+\emph{1: Functional suitability}\\
+The different parts of the system is without system crashing bugs as far as the team knows. This ensures functional correctness and is important for the users satisfactory.\\
+
+\\\newline
+\noindent \emph{2: Operability}\\ 
+The mechanics of the game are relatively easy to learn. The different choices are visible at all times which makes it easy for the user to recall rather then remember what options the player has. By using drag \& drop for moving players, one will automatically recognize the similarity from previous encounters with board games. \\
+\\
+However making a tutorial on how to use the game, as suggested later in further development, this non functional requirement would be completely covered.\\
+\\
+\\\newline
+\emph{3: Transferability}\\
+The client works on Mac, Windows and Linux. Therefore it is considered to be high transferability. Any client that can send JSON commands can connect to the server, which includes devices like Arduino.
+
 
 \section{Additional features}
 
