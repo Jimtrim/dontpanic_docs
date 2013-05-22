@@ -100,7 +100,7 @@ This is the suggested ER diagram that was made early in the designing phase.
 \end{figure}
 
 \subsection{Final database model}
-With the use of JSON all the game variables were stored in one string instead of storing it in the different database tables. Therefore the final database model is a lot less than the initial ER diagram, but actually contains the same amount of variables as in the initial ER diagram.	
+With the use of JSON all the game variables were stored in one string instead of storing it in the different database tables. Therefore the final database model is smaller than the initial ER diagram, but actually contains the same amount of variables as the initial ER diagram.	
 \begin{figure}[H]
   \centering
     \includegraphics[width=1.0\textwidth]{img/finaldatabase.jpeg}
@@ -123,7 +123,7 @@ The sequence diagrams show the interactions between the files, functions and met
   \label{fig:movegamepieceseq}
 \end{figure}
 
-The above diagram show the interaction between the JavaScript  files when a player decides to move his or hers game piece. The player initializes the sequence by clicking on the game piece in his HTML view. The first file after the HTML view is the game.js, the file that handles and interprets player inputs. The game.js file interacts with client.js which is the file handling every visual update of the game board. The file server.js Imports http and makes a server that socket.io can listen to; it connects the game interactions and game view with the engine. The file engine.js handles the game logic and game rules. When the interaction is at this point the engine.js fires a change to the client that in turn updates the view in the HTML file.\\
+The above diagram show the interaction between the JavaScript files when a player decides to move his or hers game piece. The player initializes the sequence by clicking on the game piece in his HTML view. The first file after the HTML view is the game.js, the file that handles and interprets player inputs. The game.js file interacts with client.js which is the file handling every visual update of the game board. The file server.js imports http and makes a server that socket.io can listen to; it connects the game interactions and game view with the engine. The file engine.js handles the game logic and game rules. When the interaction is at this point the engine.js fires a change to the client that in turn updates the view in the HTML file.\\
 
 
 \begin{figure}[H]
@@ -143,5 +143,5 @@ The above diagram shows the interactions of the JavaScript files when a player u
   \label{fig:gamesetupseq}
 \end{figure}
 
-The above diagram shows the interaction of the JavaScript files when an expert creates a game, the details of this is explained thoroughly in the use cases. The expert uses the mouse pad to interact with the game.html page, and is directed to the expert interface. The file expert interface.js is where all the dragging of the nodes, and creating and placing of the zones and players are created. When the expert is finished the game object is stored to the database. The last interactions is when game.html is updated when it get notifications from the database. The game can now be chosen from a list in game.html and played. 
+The above diagram shows the interaction of the JavaScript files when an expert creates a game, the details of this is explained thoroughly in the use cases. The expert uses the mouse pad to interact with the game.html page, and is directed to the expert interface. The file expert interface.js is where all the dragging of the nodes, and creating and placing of the zones and players are created. When the expert is finished the game object is stored to the database. The last interactions is when game.html is updated when it get notifications from the database. The game can now be chosen from a list in game.html and be played. 
 
