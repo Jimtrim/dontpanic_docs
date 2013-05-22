@@ -43,7 +43,10 @@ The modified waterfall model has worked fine. There have been some deviations to
 proposed by the customer later in the project, when the design phase was largely completed, resulting in the process model not being followed
 to the letter. This was not a major, issue, however. The design and implementation part worked very well, since the 
 team maintained contact and frequent meetings and correspondence with the customer. If some features were unsatisfying, the design process would 
-start over. Even though this was possible, only small changes needed to be made. Being able to push forward to completion, without spending excessive time on perfecting every part before the next feature could be introduced, has been good for the development and progress of the game. 
+start over. Even though this was possible, only small changes needed to be made. Being able to push forward to completion, without spending excessive time on perfecting every part before the next feature could be introduced, has been good for the development and progress of the game. \\
+\\
+The KanBan board also helped out a lot. It was easy to add new tasks to the board according to the new requirements and deviations after the customer meetings. In addition there was easy too see who was working with each specific task, and who had completed the previous tasks. This way it was easy to see if anyone had completed a similar task and thus asking that person for help.
+
 
 \subsection{Project Planning}
 
@@ -55,6 +58,10 @@ As specified by the process model, most of the planning happened in the early ph
 The chosen development language Javascript has been rewarding to work with. Being the most used language on the web, expanding our knowledge and skill with JavaScript has expanded our understanding of websites and programming in general. Compared to languages such as Java, which has strong typing, JavaScript is loosely typed, meaning the variable types are not explicitly stated and can be changed at runtime. It is also dynamic and has first-class function, which allows a lot of flexibility and means objects can be extended and modified at runtime, functions can be passed as arguments to other functions, and the program does not require compiling.\\
 \newline
 Although JavaScript introduces a lot of new, useful concepts, understanding how to use them in practice was a challenge at first. Examples of this included asynchronous functions, which are used a lot in Node.js and especially when communicating with a database. Understanding the flow of such programs required a lot of trial and error, but resulted in better understanding and more effective functions, compared to blocking functions for the same tasks.\\
+
+\section{Database choice}
+
+Choosing MySQL for the database may have been the wrong decision. Much time was used to set up the database connection due to firewalls and connecting javascript with MySQL. In addition the game can not be played outside the NTNU network. Therefore MongoDB could have been a better choice. It seemed more time consuming at the start, but turns out it could have been quite the opposite. MongoDB stores JSON dynamically whereas our MySQL database stores JSON in varchar (string), therefore MongoDB probably would have been the better choice.
 
 
 \section{Group interaction}
