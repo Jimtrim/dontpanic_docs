@@ -188,7 +188,9 @@ The game ends immediately in defeat for all players if all zones on the map reac
 \chapter{User manual}
 \label{appendix:D}
 %
-This is a high level description of how to play Don't Panic! The game is started by accessing the game server through a web browser (if you are running a local server, use 127.0.0.1:8008). When starting the program, the user is given four choices:
+This is a high level description of how to play Don't Panic! See the README file in the game folder on how to install the game.\\
+\\
+When starting the program, the user is given four choices:
 
 \begin{figure}[H]
   \centering
@@ -217,19 +219,30 @@ When clicking the Play-button, a list of the available game-templates is shown:
   \label{fig:buttons}
 \end{figure}
 
-\noindent The available buttons depends on if a player has selected a zone or a node. As seen in the images above, the top screenshot shows the buttons available when selecting a node, while the bottom one shows the buttons available when selecting a zone. The buttons for adding and removing roadblocks, information center, moving people and decreasing panic are not available when neither a zone nor a node is selected.
+\noindent The available buttons depends on if a player has selected a zone or a node. As seen in the images above, the top screenshot shows the buttons available when selecting a node, while the bottom one shows the buttons available when selecting a zone. The buttons for adding and removing roadblocks, information center, moving people and decreasing panic are not available when neither a zone nor a node is selected. A description of the actions available to the players is as follows:
 
 \begin{itemize}
-\item Buttons - 'English', 'Norwegian', 'Italian', chooses the language for the game (Italian has not been implemented).
-\item Button - 'End Game', ends the current game.
-\item Button - 'Next player', changes the turn.
-\item Button - 'Move people', moves people from this zone to the next zone pressed.
-\item Button - 'Decrease panic', decrease the panic in this zone.
-\item Button - 'Add information center', add an information center in this node.
-\item Button - 'Add road block', add a road block in this node.
-\item Button - 'Remove road block', remove the road block in this node.
-\item Button - 'Use information card', use one of your information cards.
+\item 'English', 'Norwegian', 'Italian': Change the language of the game by clicking the appropriate button (Italian has not been implemented).
+\item 'End Game': Clicking this button ends the current game, and uploads the replay to the database.
+\item 'Next player': A player must click this button when he is done with his turn.
+\item 'Move people': To move people between zones, a player must first select the zone he wants to move people from, then click the “Move people”-button in the top menu, as seen in the screenshot above. After clicking the button, the player must choose which zone to move the people to. When this is done, 5 people will be moved between the zones, or 10, depending on if the player is a Driver or not. Both zones have to be adjacent to the node the player is located on, and they have to share at least two nodes.
+\item 'Decrease panic': To decrease panic in a zone, the player must first select which adjacent zone he wants to decrease panic in, then click the “Decrease panic”-button'.
+\item Button -'Add information center': To add an information center on a node, the player must select the node (an information center can only be placed on the node the player is located on) and click the “Add information center”-button in the top menu.
+\item 'Add road block': To add a roadblock, a player must select the node (a roadblock can only be placed on the node the user is located on) and click the “Add road block”-button. There has to be two players on the node to build a roadblock, unless the player building the roadblock is an Operation Expert.
+\item 'Remove road block': To remove a roadblock, a player must select the node (a roadblock can only be removed from the node the user is located on) and click the “Remove road block”-button. There has to be two players on the node to remove a roadblock, unless the player removing the roadblock is an Operation Expert.
+\item 'Use information card': To use an information card, the player must click on the chosen card in his information panel.
 \end{itemize}
+
+\subsection*{Moving}
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{img/moving.png}
+  \caption{User Manual, 'Moving a pawn from one node to another'}
+  \label{fig:moving}
+\end{figure}
+
+The players can only move their pawns one node at a time. To move a pawn, a player must select his pawn by clicking and holding the left mouse button down over his own pawn, then drag the pawn to an adjacent node the player wants to move to. Then release the mouse button to finish the move.
 
 \section{Expert interface}
 
